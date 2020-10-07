@@ -35,7 +35,7 @@ public class Car : MonoBehaviour
         }
         float step = speed * Time.deltaTime;
         var targetrotation = Quaternion.LookRotation(wayPoints[index].transform.position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetrotation, speed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetrotation, speed * Time.deltaTime * 0.2f);
         transform.position = Vector3.MoveTowards(transform.position, wayPoints[index].transform.position, step);
     }
 }
