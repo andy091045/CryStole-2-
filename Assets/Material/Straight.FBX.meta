@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: DefaultMaterial_Base_Color
-    second: {fileID: 2800000, guid: 2dee659884394dc4ab48384a513b8ad7, type: 3}
+    second: {fileID: 2800000, guid: 160a24fba2d1b8448b11d693386e61ec, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: DefaultMaterial_Normal_OpenGL
-    second: {fileID: 2800000, guid: 99ec9874ed4cfd14391ba50cf318c93d, type: 3}
+    second: {fileID: 2800000, guid: 31fb7bb763c471d43a9e366c70b6bbb4, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
