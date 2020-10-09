@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public static Weapon Instance; //設定全域變數
     public PlayerType playerType;
     public GameObject Sword;
 
@@ -19,6 +20,9 @@ public class Weapon : MonoBehaviour
     // public LayerMask layer;
     // private Vector3 previousPos;
     // Start is called before the first frame update
+    void Awake(){
+        Instance=this;
+    }
     void Start()
     {
         audiosource = GetComponent<AudioSource>();
@@ -54,17 +58,29 @@ public class Weapon : MonoBehaviour
         // }
     }
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Sword.SetActive(false);
+  public void SwitchEvent(bool n){
+if(n==true){
+     Debug.Log("switch");
+     Sword.SetActive(false);
             NextSword.SetActive(true);
             changeSword = Sword;
             Sword = NextSword;
             NextSword = changeSword;
-            audiosource.PlayOneShot(impact);
-        }
+            n=true;
+            // audiosource.PlayOneShot(impact);
+}
+  }
+    void Update()
+    {
+        // if (Input.GetKeyDown(KeyCode.A))
+        // {
+        //     Sword.SetActive(false);
+        //     NextSword.SetActive(true);
+        //     changeSword = Sword;
+        //     Sword = NextSword;
+        //     NextSword = changeSword;
+        //     audiosource.PlayOneShot(impact);
+        // }
         // RaycastHit hit;
         // if (Physics.Raycast(transform.position, transform.forward, out hit, 1, layer))
         // {
@@ -77,7 +93,7 @@ public class Weapon : MonoBehaviour
         //         // amy.distroyCube();
         //     }
         // }
-        // previousPos = transform.position;
+        // previousPos = transform.position;        
     }
     public enum PlayerType
     {

@@ -14,7 +14,8 @@ namespace Valve.VR.InteractionSystem.Sample
      
 private void Update(){
     if(SteamVR_Actions.ChangeWeapon.Switch.GetStateDown(SteamVR_Input_Sources.Any)){
-        Debug.Log("switch");
+        // Debug.Log(SteamVR_Actions.ChangeWeapon.Switch.GetStateDown(SteamVR_Input_Sources.Any));
+       Weapon.Instance.SwitchEvent(true);
     }  
 }
 }
