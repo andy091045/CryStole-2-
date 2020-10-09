@@ -4,6 +4,10 @@
    "app_key" : "application.generated.unity.crystole2.exe",
    "bindings" : {
       "/actions/buggy" : {
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
          "sources" : [
             {
                "inputs" : {
@@ -68,11 +72,15 @@
          ]
       },
       "/actions/changeweapon" : {
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
          "sources" : [
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/changeweapon/in/switch"
+                     "output" : "/actions/changeweapon/in/switchleft"
                   }
                },
                "mode" : "trigger",
@@ -81,28 +89,10 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/changeweapon/in/switch"
+                     "output" : "/actions/changeweapon/in/switchright"
                   }
                },
                "mode" : "trigger",
-               "path" : "/user/hand/right/input/trigger"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/changeweapon/in/switch"
-                  }
-               },
-               "mode" : "button",
-               "path" : "/user/hand/left/input/trigger"
-            },
-            {
-               "inputs" : {
-                  "click" : {
-                     "output" : "/actions/changeweapon/in/switch"
-                  }
-               },
-               "mode" : "button",
                "path" : "/user/hand/right/input/trigger"
             }
          ]
@@ -286,6 +276,10 @@
          ]
       },
       "/actions/platformer" : {
+         "chords" : [],
+         "haptics" : [],
+         "poses" : [],
+         "skeleton" : [],
          "sources" : [
             {
                "inputs" : {

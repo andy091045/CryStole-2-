@@ -608,7 +608,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1688512034818842127
+--- !u!114 &1870682448235756388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -617,10 +617,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1688512034186869152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5632604bcc6377646bc7688f433c695b, type: 3}
+  m_Script: {fileID: 11500000, guid: fb5ce6a4354986c4e9eaeba19517f0e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 1
+  playerType: 0
   Sword: {fileID: 1688512033600130826}
   NextSword: {fileID: 1688512033328735950}
   changeSword: {fileID: 0}

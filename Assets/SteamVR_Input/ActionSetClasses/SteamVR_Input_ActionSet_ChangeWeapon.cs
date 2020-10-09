@@ -17,11 +17,19 @@ namespace Valve.VR
     public class SteamVR_Input_ActionSet_ChangeWeapon : Valve.VR.SteamVR_ActionSet
     {
         
-        public virtual SteamVR_Action_Boolean Switch
+        public virtual SteamVR_Action_Boolean SwitchLeft
         {
             get
             {
-                return SteamVR_Actions.changeWeapon_Switch;
+                return SteamVR_Actions.changeWeapon_SwitchLeft;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean SwitchRight
+        {
+            get
+            {
+                return SteamVR_Actions.changeWeapon_SwitchRight;
             }
         }
     }

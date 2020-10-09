@@ -83,7 +83,11 @@
       "requirement": "optional"
     },
     {
-      "name": "/actions/ChangeWeapon/in/Switch",
+      "name": "/actions/ChangeWeapon/in/SwitchLeft",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/ChangeWeapon/in/SwitchRight",
       "type": "boolean"
     }
   ],
@@ -177,8 +181,7 @@
       "/actions/default/out/Haptic": "Haptic",
       "/actions/platformer/in/Jump": "Jump",
       "/actions/default/in/SnapTurnLeft": "Snap Turn (Left)",
-      "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
-      "/actions/ChangeWeapon/in/Switch": "Switch"
+      "/actions/default/in/SnapTurnRight": "Snap Turn (Right)"
     }
   ]
 }
