@@ -15,19 +15,19 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var angle = transform.rotation.x;
-        if (angle > 10)
-        {
-            speed = 20;
-        }
-        else if (angle < 10 && angle > 0)
-        {
-            speed = 10;
-        }
-        else if (angle < 0)
-        {
-            speed = 5;
-        }
+        // var angle = transform.rotation.x;
+        // if (angle > 10)
+        // {
+        //     speed = 20;
+        // }
+        // else if (angle < 10 && angle > 0)
+        // {
+        //     speed = 10;
+        // }
+        // else if (angle < 0)
+        // {
+        //     speed = 5;
+        // }
         var distance = Vector3.Distance(transform.position, wayPoints[index].transform.position);
         if (distance < 0.5f)
         {

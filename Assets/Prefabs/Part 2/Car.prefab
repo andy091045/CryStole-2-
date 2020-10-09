@@ -483,18 +483,6 @@ MonoBehaviour:
   NextSword: {fileID: 1688512035252390733}
   changeSword: {fileID: 0}
   impact: {fileID: 0}
---- !u!114 &5661591654758508950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688512034186834822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5db530614bbca42ad0ce8f5def7fe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &8482642134087698506
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -637,18 +625,6 @@ MonoBehaviour:
   NextSword: {fileID: 1688512033328735950}
   changeSword: {fileID: 0}
   impact: {fileID: 0}
---- !u!114 &1256998924052943284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688512034186869152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5db530614bbca42ad0ce8f5def7fe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1688512034413300992
 GameObject:
   m_ObjectHideFlags: 0

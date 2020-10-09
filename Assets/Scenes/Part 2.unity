@@ -336,30 +336,6 @@ Transform:
   m_Father: {fileID: 1651536018}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &262856961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1688512034186834822, guid: 52f5309414155f4458d6cd40c74d267a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1688512034842081281}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &262856962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262856961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4390f3b73c731c846a0cc863c72d7a1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantAction:
-    actionPath: /actions/ChangeWeapon/in/Switch
-    needsReinit: 0
-  hand: {fileID: 0}
-  prefabToPlant: {fileID: 1000011210241306, guid: 8a2487c189a464148aadc3af2effa7c8,
-    type: 3}
 --- !u!1 &311503949
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +621,7 @@ Transform:
   m_Father: {fileID: 1651536018}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &457519611
+--- !u!43 &542650796
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1331,6 +1307,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909996031}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!21 &974974903
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &981292266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,30 +1650,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043468517}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1056122459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1688512034186869152, guid: 52f5309414155f4458d6cd40c74d267a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1688512034842081281}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1056122460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056122459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4390f3b73c731c846a0cc863c72d7a1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantAction:
-    actionPath: /actions/ChangeWeapon/in/Switch
-    needsReinit: 0
-  hand: {fileID: 0}
-  prefabToPlant: {fileID: 1000011210241306, guid: 8a2487c189a464148aadc3af2effa7c8,
-    type: 3}
 --- !u!1 &1120775547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,40 +2353,6 @@ Transform:
   m_Father: {fileID: 1651536018}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1486627766
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1563257262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4297,12 +4249,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1486627766}
+      objectReference: {fileID: 974974903}
     - target: {fileID: 1688512034185921010, guid: 52f5309414155f4458d6cd40c74d267a,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 457519611}
+      objectReference: {fileID: 542650796}
+    - target: {fileID: 1688512034186869152, guid: 52f5309414155f4458d6cd40c74d267a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1921166555727411598, guid: 52f5309414155f4458d6cd40c74d267a,
         type: 3}
       propertyPath: m_Enabled
