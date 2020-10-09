@@ -15,10 +15,7 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-         test.Instance.tt(1);
-        }
+     
         // var angle = transform.rotation.x;
         // if (angle > 10)
         // {
