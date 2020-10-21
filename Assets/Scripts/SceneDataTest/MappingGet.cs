@@ -11,7 +11,6 @@ public class MappingGet : MonoBehaviour
     void Start()
     {
         data = JsonUtility.FromJson<Music>(mapping.text);
-        Debug.Log(data._events[0]._time);
     }
     void Update()
     {
@@ -26,6 +25,7 @@ public class MappingGet : MonoBehaviour
             file.Write(fileContext);
             file.Close();
         }
+
     }
 
     // Update is called once per frame
