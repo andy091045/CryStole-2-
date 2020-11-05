@@ -37,11 +37,10 @@ float timer = 0;
         {
             if (other.gameObject.CompareTag("LeftEnemy"))
             {if(ChangeCountL%2==0){
-                if(SwordHeadL.transform.position.z>=other.gameObject.transform.position.z){ Destroy(other.gameObject);}
+                if((SwordHeadL.transform.position.x-PrePosition.x)<2&&(SwordHeadL.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
             }else{
                 Destroy(other.gameObject);
-            }
-               
+            }               
             }
         }
        
