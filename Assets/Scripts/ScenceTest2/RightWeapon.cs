@@ -6,13 +6,14 @@ using UnityEngine;
 public class RightWeapon : MonoBehaviour
 {
     public static RightWeapon Instance; //設定全域變數
-    // public Vector3 PrePosition;
+    public Vector3 PrePosition;
     public PlayerType playerType;
     public GameObject SwordHead;
     public GameObject Sword;
     public GameObject NextSword;
     public GameObject changeSword;
 int ChangeCount=0;
+float timer = 0;
     public AudioClip impact;
     AudioSource audiosource;
     // public Score andy;
@@ -98,7 +99,16 @@ int ChangeCount=0;
         //         // amy.distroyCube();
         //     }
         // }
-        // previousPos = transform.position;        
+        // previousPos = transform.position;    
+                timer = timer + Time.deltaTime;
+        if(timer>=2f){
+             ChangePosition();             
+            timer=0f;           
+        }    
+    }
+       public void ChangePosition(){
+        PrePosition=SwordHead.transform.position;
+        Debug.Log(PrePosition);
     }
     public enum PlayerType
     {

@@ -16,9 +16,11 @@ public class TimeCount : MonoBehaviour
     {
         timer = timer + Time.deltaTime;
         if(timer>=2f){
-            // LeftWeapon.Instance.PrePostion=SwordHeadL.transform;
-            timer=0f;
+             LeftWeapon.Instance.ChangePosition();
+             LeftWeapon.Instance.ChangePosition();
+            timer=0f;           
         }
+          Debug.Log(timer);
         
     }
 }

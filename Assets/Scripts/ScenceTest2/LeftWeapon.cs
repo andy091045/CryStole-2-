@@ -6,13 +6,14 @@ using UnityEngine;
 public class LeftWeapon : MonoBehaviour
 {
     public static LeftWeapon Instance; //設定全域變數
-    // public transform PrePosition;
+     public Vector3 PrePosition;
     public PlayerType playerType;
     public GameObject SwordHeadL;
     public GameObject Sword;
     public GameObject NextSword;
     public GameObject changeSword;
 int ChangeCountL=0;
+float timer = 0;
     public AudioClip impact;
     AudioSource audiosource;
     // public Score andy;
@@ -110,7 +111,16 @@ int ChangeCountL=0;
         //         // amy.distroyCube();
         //     }
         // }
-        // previousPos = transform.position;        
+        // previousPos = transform.position;       
+                timer = timer + Time.deltaTime;
+        if(timer>=2f){
+             ChangePosition();             
+            timer=0f;           
+        } 
+    }
+    public void ChangePosition(){
+        PrePosition=SwordHeadL.transform.position;
+        Debug.Log(PrePosition);
     }
     public enum PlayerType
     {
