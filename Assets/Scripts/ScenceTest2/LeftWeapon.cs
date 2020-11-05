@@ -36,11 +36,16 @@ float timer = 0;
         if (playerType == PlayerType.LeftType)
         {
             if (other.gameObject.CompareTag("LeftEnemy"))
-            {if(ChangeCountL%2==0){
-                if((SwordHeadL.transform.position.x-PrePosition.x)<2&&(SwordHeadL.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
-            }else{
-                Destroy(other.gameObject);
-            }               
+            { //這邊是做攻擊距離判定用的，分為戳跟砍
+                if(ChangeCountL%2==0){
+                float x=0;
+                float y=0;
+                float z=0;
+                x=System.Math.Abs(SwordHeadL.transform.position.x-PrePosition.x);
+                y=System.Math.Abs(SwordHeadL.transform.position.y-PrePosition.y);
+                y=System.Math.Abs(SwordHeadL.transform.position.z-PrePosition.z);
+                if(x>1||y>1){Debug.Log("超過了啦");}else{Destroy(other.gameObject);}
+                }
             }
         }
        
@@ -119,7 +124,6 @@ float timer = 0;
     }
     public void ChangePosition(){
         PrePosition=SwordHeadL.transform.position;
-        Debug.Log(PrePosition);
     }
     public enum PlayerType
     {
