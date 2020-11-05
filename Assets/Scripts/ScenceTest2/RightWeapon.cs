@@ -6,11 +6,13 @@ using UnityEngine;
 public class RightWeapon : MonoBehaviour
 {
     public static RightWeapon Instance; //設定全域變數
+    // public Vector3 PrePosition;
     public PlayerType playerType;
+    public GameObject SwordHead;
     public GameObject Sword;
     public GameObject NextSword;
     public GameObject changeSword;
-
+int ChangeCount=0;
     public AudioClip impact;
     AudioSource audiosource;
     // public Score andy;
@@ -53,10 +55,15 @@ public class RightWeapon : MonoBehaviour
     public void SwitchRightEvent(bool n)
     {  
         if (playerType == PlayerType.RightType)
-        {Debug.Log("switch");
-            if (n == true)
         {
-          
+            if (n == true)
+        {   
+            ChangeCount++;
+        if(ChangeCount%2==1){
+            SwordHead.SetActive(false);
+        }else{
+             SwordHead.SetActive(true);
+        }       
             Sword.SetActive(false);
             NextSword.SetActive(true);
             changeSword = Sword;

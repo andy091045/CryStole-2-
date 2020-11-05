@@ -6,11 +6,13 @@ using UnityEngine;
 public class LeftWeapon : MonoBehaviour
 {
     public static LeftWeapon Instance; //設定全域變數
+    // public transform PrePosition;
     public PlayerType playerType;
+    public GameObject SwordHeadL;
     public GameObject Sword;
     public GameObject NextSword;
     public GameObject changeSword;
-
+int ChangeCountL=0;
     public AudioClip impact;
     AudioSource audiosource;
     // public Score andy;
@@ -33,8 +35,12 @@ public class LeftWeapon : MonoBehaviour
         if (playerType == PlayerType.LeftType)
         {
             if (other.gameObject.CompareTag("LeftEnemy"))
-            {
+            {if(ChangeCountL%2==0){
+                if(SwordHeadL.transform.position.z>=other.gameObject.transform.position.z){ Destroy(other.gameObject);}
+            }else{
                 Destroy(other.gameObject);
+            }
+               
             }
         }
        
@@ -44,6 +50,12 @@ public class LeftWeapon : MonoBehaviour
     {
         if (n == true)
         {
+            ChangeCountL++;
+        if(ChangeCountL%2==1){
+            SwordHeadL.SetActive(false);
+        }else{
+             SwordHeadL.SetActive(true);
+        } 
             Debug.Log("switch");
             Sword.SetActive(false);
             NextSword.SetActive(true);
@@ -51,6 +63,7 @@ public class LeftWeapon : MonoBehaviour
             Sword = NextSword;
             NextSword = changeSword;
             n = true;
+            Debug.Log(ChangeCountL);
             // audiosource.PlayOneShot(impact);
         }
 
@@ -62,6 +75,7 @@ public class LeftWeapon : MonoBehaviour
             Debug.Log("switch");
             if (n == true)
             {
+                     
                 Sword.SetActive(false);
                 NextSword.SetActive(true);
                 changeSword = Sword;

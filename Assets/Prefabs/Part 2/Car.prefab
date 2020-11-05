@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 1688512033832788715}
   - component: {fileID: 1688512033832788712}
   - component: {fileID: 1688512033832788713}
+  - component: {fileID: 1673247684}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -319,7 +320,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688512033832788710}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e31a011da884b5841ad55744621fbe4f, type: 3}
   m_Name: 
@@ -340,6 +341,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  speed: 10
+--- !u!114 &1673247684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688512033832788710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cae1faf36a08c548b2de66e89c5c7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathCreator: {fileID: 0}
+  end: 0
   speed: 10
 --- !u!54 &7337572611983487532
 Rigidbody:
@@ -620,7 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5ce6a4354986c4e9eaeba19517f0e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  playerType: 1
   Sword: {fileID: 1688512033600130826}
   NextSword: {fileID: 1688512033328735950}
   changeSword: {fileID: 0}
