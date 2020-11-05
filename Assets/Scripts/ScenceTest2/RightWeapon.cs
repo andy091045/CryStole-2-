@@ -36,8 +36,11 @@ float timer = 0;
         if (playerType == PlayerType.RightType)
         {
             if (other.gameObject.CompareTag("RightEnemy"))
-            {
+            {if(ChangeCount%2==0){
+                if((SwordHead.transform.position.x-PrePosition.x)<2&&(SwordHead.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
+            }else{
                 Destroy(other.gameObject);
+            }     
             }
         }
 
