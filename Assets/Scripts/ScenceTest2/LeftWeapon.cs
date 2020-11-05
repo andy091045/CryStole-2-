@@ -48,7 +48,7 @@ float timer = 0;
     }
     // Update is called once per frame
     public void SwitchLeftEvent(bool n)
-    {
+    {Debug.Log("in");
         if (n == true)
         {
             ChangeCountL++;
@@ -112,11 +112,11 @@ float timer = 0;
         //     }
         // }
         // previousPos = transform.position;       
-                timer = timer + Time.deltaTime;
-        if(timer>=2f){
-             ChangePosition();             
-            timer=0f;           
-        } 
+        //         timer = timer + Time.deltaTime;
+        // if(timer>=2f){
+        //      ChangePosition();             
+        //     timer=0f;           
+        // } 
     }
     public void ChangePosition(){
         PrePosition=SwordHeadL.transform.position;

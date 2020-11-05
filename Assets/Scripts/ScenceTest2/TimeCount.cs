@@ -20,7 +20,7 @@ public class TimeCount : MonoBehaviour
              LeftWeapon.Instance.ChangePosition();
             timer=0f;           
         }
-          Debug.Log(timer);
+          
         
     }
 }
