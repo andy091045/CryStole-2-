@@ -19,7 +19,7 @@ public class MappingCreator : MonoBehaviour
         data = JsonUtility.FromJson<Music2>(mapping.text);
         for (int i = 0; i < 187; i++)
         {
-            if (data._events[i]._value <= 3)
+            if (data._events[i]._value <= 1)
             {
                 GameObject cube = Lean.Pool.LeanPool.Spawn(cubes[0], points[data._events[i]._type]);
                 Vector3 move = cube.transform.position;
@@ -30,9 +30,31 @@ public class MappingCreator : MonoBehaviour
                 }
                 cube.transform.position = move;
             }
-            else
+            else if (data._events[i]._value <= 3)
             {
                 GameObject cube = Lean.Pool.LeanPool.Spawn(cubes[1], points[data._events[i]._type]);
+                Vector3 move = cube.transform.position;
+                move = new Vector3(move.x, move.y, move.z + 10.0f * data._events[i]._time);
+                if (move.z > 100.0f)
+                {
+                    move.y += 25.0f;
+                }
+                cube.transform.position = move;
+            }
+            else if (data._events[i]._value <= 5)
+            {
+                GameObject cube = Lean.Pool.LeanPool.Spawn(cubes[2], points[data._events[i]._type]);
+                Vector3 move = cube.transform.position;
+                move = new Vector3(move.x, move.y, move.z + 10.0f * data._events[i]._time);
+                if (move.z > 100.0f)
+                {
+                    move.y += 25.0f;
+                }
+                cube.transform.position = move;
+            }
+            else
+            {
+                GameObject cube = Lean.Pool.LeanPool.Spawn(cubes[3], points[data._events[i]._type]);
                 Vector3 move = cube.transform.position;
                 move = new Vector3(move.x, move.y, move.z + 10.0f * data._events[i]._time);
                 if (move.z > 100.0f)

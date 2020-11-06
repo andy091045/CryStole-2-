@@ -90,7 +90,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 818cc50597561ef40a415593e26c9ead, type: 2}
+  - {fileID: 2100000, guid: fa5a7588faa117e46ad7b0e2d3893a96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0580897246f76204f83b4ac9d3d8678b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -494,7 +494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5632604bcc6377646bc7688f433c695b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrePosition: {x: 0, y: 0, z: 0}
   playerType: 0
+  SwordHeadL: {fileID: 0}
   Sword: {fileID: 1688512034413300992}
   NextSword: {fileID: 1688512035252390733}
   changeSword: {fileID: 0}
@@ -636,7 +638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5ce6a4354986c4e9eaeba19517f0e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrePosition: {x: 0, y: 0, z: 0}
   playerType: 1
+  SwordHead: {fileID: 0}
   Sword: {fileID: 1688512033600130826}
   NextSword: {fileID: 1688512033328735950}
   changeSword: {fileID: 0}
@@ -700,7 +704,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 818cc50597561ef40a415593e26c9ead, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -793,7 +797,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 818cc50597561ef40a415593e26c9ead, type: 2}
+  - {fileID: 2100000, guid: 67c62c391aec1054ab09f290a8afb66d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -12,8 +12,9 @@ public class RightWeapon : MonoBehaviour
     public GameObject Sword;
     public GameObject NextSword;
     public GameObject changeSword;
-int ChangeCount=0;
-float timer = 0;
+    int ChangeCount = 0;
+    float timer = 0;
+    bool switchWeapon = true; //true左手為紅色右手藍色，false左手為黃色右手為紫色
     public AudioClip impact;
     AudioSource audiosource;
     // public Score andy;
@@ -31,16 +32,25 @@ float timer = 0;
     }
 
     void OnTriggerEnter(Collider other)
-    {   
+    {
         //右手武器只能攻擊右手屬性敵人
         if (playerType == PlayerType.RightType)
         {
-            if (other.gameObject.CompareTag("RightEnemy"))
-            {if(ChangeCount%2==0){
-                if((SwordHead.transform.position.x-PrePosition.x)<2&&(SwordHead.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
-            }else{
-                Destroy(other.gameObject);
-            }     
+            // if (other.gameObject.CompareTag("RightEnemy"))
+            // {
+            //         if(ChangeCount%2==0){
+            //         if((SwordHead.transform.position.x-PrePosition.x)<2&&(SwordHead.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
+            //     }else{
+            //         Destroy(other.gameObject);
+            //     }                 
+            // }
+            if (other.gameObject.CompareTag("blueEnemy"))
+            {
+                if (switchWeapon) { Destroy(other.gameObject); }
+            }
+            if (other.gameObject.CompareTag("purpleEnemy"))
+            {
+                if (!switchWeapon) { Destroy(other.gameObject); }
             }
         }
 
@@ -55,29 +65,33 @@ float timer = 0;
         // }
     }
     // Update is called once per frame
-   
+
     public void SwitchRightEvent(bool n)
-    {  
+    {
         if (playerType == PlayerType.RightType)
         {
             if (n == true)
-        {   
-            ChangeCount++;
-        if(ChangeCount%2==1){
-            SwordHead.SetActive(false);
-        }else{
-             SwordHead.SetActive(true);
-        }       
-            Sword.SetActive(false);
-            NextSword.SetActive(true);
-            changeSword = Sword;
-            Sword = NextSword;
-            NextSword = changeSword;
-            n = true;
-            // audiosource.PlayOneShot(impact);
+            {
+                // ChangeCount++;
+                // if (ChangeCount % 2 == 1)
+                // {
+                //     SwordHead.SetActive(false);
+                // }
+                // else
+                // {
+                //     SwordHead.SetActive(true);
+                // }
+                switchWeapon = !switchWeapon;
+                Sword.SetActive(false);
+                NextSword.SetActive(true);
+                changeSword = Sword;
+                Sword = NextSword;
+                NextSword = changeSword;
+                n = true;
+                // audiosource.PlayOneShot(impact);
+            }
         }
-        }   
-       
+
     }
     void Update()
     {
@@ -109,8 +123,9 @@ float timer = 0;
         //     timer=0f;           
         // }    
     }
-       public void ChangePosition(){
-        PrePosition=SwordHead.transform.position;
+    public void ChangePosition()
+    {
+        PrePosition = SwordHead.transform.position;
         Debug.Log(PrePosition);
     }
     public enum PlayerType

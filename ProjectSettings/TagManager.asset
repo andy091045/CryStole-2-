@@ -9,6 +9,10 @@ TagManager:
   - enemy
   - LeftEnemy
   - RightEnemy
+  - redEnemy
+  - blueEnemy
+  - yellowEnemy
+  - purpleEnemy
   layers:
   - Default
   - TransparentFX
