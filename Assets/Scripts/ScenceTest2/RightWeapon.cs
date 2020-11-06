@@ -123,10 +123,15 @@ public class RightWeapon : MonoBehaviour
         //     timer=0f;           
         // }    
     }
+<<<<<<< HEAD
     public void ChangePosition()
     {
         PrePosition = SwordHead.transform.position;
         Debug.Log(PrePosition);
+=======
+       public void ChangePosition(){
+        PrePosition=SwordHead.transform.position;        
+>>>>>>> e01051fd0160585034e27e35293f8950bcd03210
     }
     public enum PlayerType
     {
