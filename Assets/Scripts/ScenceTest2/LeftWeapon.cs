@@ -8,7 +8,7 @@ public class LeftWeapon : MonoBehaviour
     public static LeftWeapon Instance; //設定全域變數
     public Vector3 PrePosition;
     public PlayerType playerType;
-    public GameObject SwordHeadL;
+    // public GameObject SwordHeadL;
     public GameObject Sword;
     public GameObject NextSword;
     public GameObject changeSword;
@@ -127,15 +127,10 @@ public class LeftWeapon : MonoBehaviour
         //     timer=0f;           
         // } 
     }
-<<<<<<< HEAD
     public void ChangePosition()
     {
-        PrePosition = SwordHeadL.transform.position;
+        // PrePosition = SwordHeadL.transform.position;
         Debug.Log(PrePosition);
-=======
-    public void ChangePosition(){
-        PrePosition=SwordHeadL.transform.position;
->>>>>>> e01051fd0160585034e27e35293f8950bcd03210
     }
     public enum PlayerType
     {
