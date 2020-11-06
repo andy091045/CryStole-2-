@@ -41,7 +41,7 @@ public class RightWeapon : MonoBehaviour
             //         if(ChangeCount%2==0){
             //         if((SwordHead.transform.position.x-PrePosition.x)<2&&(SwordHead.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
             //     }else{
-            //         Destroy(other.gameObject);
+            //         Destroy(other.gameObject);//銷毀
             //     }                 
             // }
             if (other.gameObject.CompareTag("blueEnemy"))
