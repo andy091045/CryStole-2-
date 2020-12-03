@@ -15,14 +15,21 @@ namespace Valve.VR.InteractionSystem.Sample
 private void Update(){
     if(SteamVR_Actions.ChangeWeapon.SwitchLeft.GetStateDown(SteamVR_Input_Sources.Any)){
         // Debug.Log(SteamVR_Actions.ChangeWeapon.Switch.GetStateDown(SteamVR_Input_Sources.Any));
-      LeftWeapon.Instance.SwitchLeftEvent(true);      
+      LeftWeapon.Instance.SwitchLeftEvent();      
        Debug.Log( LeftWeapon.Instance==null);
     }  
     if(SteamVR_Actions.ChangeWeapon.SwitchRight.GetStateDown(SteamVR_Input_Sources.Any)){
         // Debug.Log(SteamVR_Actions.ChangeWeapon.Switch.GetStateDown(SteamVR_Input_Sources.Any));
-       RightWeapon.Instance.SwitchRightEvent(true);
+    //    RightWeapon.Instance.SwitchRightEvent(true);
+    RightWeapon.Instance.SwitchRightEvent();
        Debug.Log("Right");
     }  
+     if(SteamVR_Actions.ChangeWeapon.Menu.GetStateDown(SteamVR_Input_Sources.Any)){
+        // Debug.Log(SteamVR_Actions.ChangeWeapon.Switch.GetStateDown(SteamVR_Input_Sources.Any));
+       CheckUserInput.Instance.menu=true;
+       RightWeapon.Instance.PauseChange();
+       Debug.Log("Menu");
+    } 
 }
 }
 }

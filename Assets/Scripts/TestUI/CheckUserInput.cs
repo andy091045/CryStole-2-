@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class CheckUserInput : MonoBehaviour
 {
+    public bool menu =false;
+    public static CheckUserInput Instance;
     // public AudioSource audioSource;
     bool isPaused = false;
     public Canvas Canvas_HUD;
     public Canvas Canvas_Paused;
     // Start is called before the first frame update
+
+    void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         Canvas_Paused.enabled = false;
@@ -26,8 +33,8 @@ public class CheckUserInput : MonoBehaviour
 
     public void CheckUser()
     {
-        if (Input.GetKeyUp(KeyCode.P))
-        {
+        
+       if(menu==true){
             if (Time.timeScale == 1)
             {
                 PauseGame();
@@ -36,7 +43,9 @@ public class CheckUserInput : MonoBehaviour
             {
                 ResumeGame();
             }
-        }
+            menu=false;
+       }
+        
     }
     void PauseGame()
     {

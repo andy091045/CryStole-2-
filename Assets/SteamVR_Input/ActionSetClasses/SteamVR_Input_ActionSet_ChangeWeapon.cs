@@ -32,5 +32,13 @@ namespace Valve.VR
                 return SteamVR_Actions.changeWeapon_SwitchRight;
             }
         }
+        
+        public virtual SteamVR_Action_Boolean Menu
+        {
+            get
+            {
+                return SteamVR_Actions.changeWeapon_Menu;
+            }
+        }
     }
 }

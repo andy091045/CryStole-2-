@@ -59,6 +59,8 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_changeWeapon_SwitchRight;
         
+        private static SteamVR_Action_Boolean p_changeWeapon_Menu;
+        
         public static SteamVR_Action_Boolean default_InteractUI
         {
             get
@@ -227,6 +229,14 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Action_Boolean changeWeapon_Menu
+        {
+            get
+            {
+                return SteamVR_Actions.p_changeWeapon_Menu.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
         private static void InitializeActionArrays()
         {
             Valve.VR.SteamVR_Input.actions = new Valve.VR.SteamVR_Action[] {
@@ -250,7 +260,8 @@ namespace Valve.VR
                     SteamVR_Actions.buggy_Reset,
                     SteamVR_Actions.mixedreality_ExternalCamera,
                     SteamVR_Actions.changeWeapon_SwitchLeft,
-                    SteamVR_Actions.changeWeapon_SwitchRight};
+                    SteamVR_Actions.changeWeapon_SwitchRight,
+                    SteamVR_Actions.changeWeapon_Menu};
             Valve.VR.SteamVR_Input.actionsIn = new Valve.VR.ISteamVR_Action_In[] {
                     SteamVR_Actions.default_InteractUI,
                     SteamVR_Actions.default_Teleport,
@@ -271,7 +282,8 @@ namespace Valve.VR
                     SteamVR_Actions.buggy_Reset,
                     SteamVR_Actions.mixedreality_ExternalCamera,
                     SteamVR_Actions.changeWeapon_SwitchLeft,
-                    SteamVR_Actions.changeWeapon_SwitchRight};
+                    SteamVR_Actions.changeWeapon_SwitchRight,
+                    SteamVR_Actions.changeWeapon_Menu};
             Valve.VR.SteamVR_Input.actionsOut = new Valve.VR.ISteamVR_Action_Out[] {
                     SteamVR_Actions.default_Haptic};
             Valve.VR.SteamVR_Input.actionsVibration = new Valve.VR.SteamVR_Action_Vibration[] {
@@ -291,7 +303,8 @@ namespace Valve.VR
                     SteamVR_Actions.buggy_Brake,
                     SteamVR_Actions.buggy_Reset,
                     SteamVR_Actions.changeWeapon_SwitchLeft,
-                    SteamVR_Actions.changeWeapon_SwitchRight};
+                    SteamVR_Actions.changeWeapon_SwitchRight,
+                    SteamVR_Actions.changeWeapon_Menu};
             Valve.VR.SteamVR_Input.actionsSingle = new Valve.VR.SteamVR_Action_Single[] {
                     SteamVR_Actions.default_Squeeze,
                     SteamVR_Actions.buggy_Throttle};
@@ -318,7 +331,8 @@ namespace Valve.VR
                     SteamVR_Actions.buggy_Brake,
                     SteamVR_Actions.buggy_Reset,
                     SteamVR_Actions.changeWeapon_SwitchLeft,
-                    SteamVR_Actions.changeWeapon_SwitchRight};
+                    SteamVR_Actions.changeWeapon_SwitchRight,
+                    SteamVR_Actions.changeWeapon_Menu};
         }
         
         private static void PreInitActions()
@@ -344,6 +358,7 @@ namespace Valve.VR
             SteamVR_Actions.p_mixedreality_ExternalCamera = ((SteamVR_Action_Pose)(SteamVR_Action.Create<SteamVR_Action_Pose>("/actions/mixedreality/in/ExternalCamera")));
             SteamVR_Actions.p_changeWeapon_SwitchLeft = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/ChangeWeapon/in/SwitchLeft")));
             SteamVR_Actions.p_changeWeapon_SwitchRight = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/ChangeWeapon/in/SwitchRight")));
+            SteamVR_Actions.p_changeWeapon_Menu = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/ChangeWeapon/in/Menu")));
         }
     }
 }

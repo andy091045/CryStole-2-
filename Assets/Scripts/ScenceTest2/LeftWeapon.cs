@@ -57,11 +57,8 @@ public class LeftWeapon : MonoBehaviour
 
     }
     // Update is called once per frame
-    public void SwitchLeftEvent(bool n)
-    {
-        Debug.Log("in");
-        if (n == true)
-        {
+    public void SwitchLeftEvent()
+    {      
             //     ChangeCountL++;
             // if(ChangeCountL%2==1){
             //     SwordHeadL.SetActive(false);
@@ -74,10 +71,7 @@ public class LeftWeapon : MonoBehaviour
             changeSword = Sword;
             Sword = NextSword;
             NextSword = changeSword;
-            n = true;
             // audiosource.PlayOneShot(impact);
-        }
-
     }
     public void SwitchRightEvent(bool n)
     {

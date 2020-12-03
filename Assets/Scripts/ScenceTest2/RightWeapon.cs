@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RightWeapon : MonoBehaviour
 {
+    int CountPause=0;
     public static RightWeapon Instance; //設定全域變數
     public Vector3 PrePosition;
     public PlayerType playerType;
@@ -12,9 +13,11 @@ public class RightWeapon : MonoBehaviour
     public GameObject Sword;
     public GameObject NextSword;
     public GameObject changeSword;
+    public GameObject PausePointer;
     int ChangeCount = 0;
     float timer = 0;
     bool switchWeapon = true; //true左手為紅色右手藍色，false左手為黃色右手為紫色
+    bool InPause=false;
     public AudioClip impact;
     AudioSource audiosource;
     // public Score andy;
@@ -63,15 +66,12 @@ public class RightWeapon : MonoBehaviour
         //     Sword = NextSword;
         //     NextSword = changeSword;
         // }
-    }
-    // Update is called once per frame
-
-    public void SwitchRightEvent(bool n)
+    }   
+     public void SwitchRightEvent()
     {
         if (playerType == PlayerType.RightType)
-        {
-            if (n == true)
-            {
+        {       
+            if(InPause==false){
                 // ChangeCount++;
                 // if (ChangeCount % 2 == 1)
                 // {
@@ -86,12 +86,23 @@ public class RightWeapon : MonoBehaviour
                 NextSword.SetActive(true);
                 changeSword = Sword;
                 Sword = NextSword;
-                NextSword = changeSword;
-                n = true;
+                NextSword = changeSword;               
                 // audiosource.PlayOneShot(impact);
             }
         }
-
+    }
+    public void PauseChange(){
+         
+        if(CountPause%2==0){
+         Sword.SetActive(false);
+         PausePointer.SetActive(true);
+         InPause=true;
+        }else{
+         Sword.SetActive(true);
+         PausePointer.SetActive(false);
+         InPause=false;
+        }
+        CountPause++;
     }
     void Update()
     {

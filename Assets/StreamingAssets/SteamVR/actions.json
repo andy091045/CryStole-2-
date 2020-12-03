@@ -89,6 +89,10 @@
     {
       "name": "/actions/ChangeWeapon/in/SwitchRight",
       "type": "boolean"
+    },
+    {
+      "name": "/actions/ChangeWeapon/in/Menu",
+      "type": "boolean"
     }
   ],
   "action_sets": [
