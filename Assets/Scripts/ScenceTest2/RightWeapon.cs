@@ -126,7 +126,7 @@ public class RightWeapon : MonoBehaviour
     public void ChangePosition()
     {
         // PrePosition = SwordHead.transform.position;
-        Debug.Log(PrePosition);
+        // Debug.Log(PrePosition);
     }
     public enum PlayerType
     {

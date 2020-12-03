@@ -130,7 +130,7 @@ public class LeftWeapon : MonoBehaviour
     public void ChangePosition()
     {
         // PrePosition = SwordHeadL.transform.position;
-        Debug.Log(PrePosition);
+        // Debug.Log(PrePosition);
     }
     public enum PlayerType
     {
