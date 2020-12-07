@@ -77,6 +77,8 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 25.0f;
                 }
                 cube.transform.position = move;
+                //物體旋轉
+                cube.transform.Rotate(0, 90, 0);
             }
             else
             {

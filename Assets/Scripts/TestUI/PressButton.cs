@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class PressButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void PrintApple(){
+    public void PrintApple()
+    {
         Debug.Log("Apple");
-    } 
+    }
 }

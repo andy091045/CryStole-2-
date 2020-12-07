@@ -47,10 +47,12 @@ public class LeftWeapon : MonoBehaviour
             // }
             if (other.gameObject.CompareTag("redEnemy"))
             {
+                HP.Instance.CountHP(1);
                 if (switchWeapon) { Destroy(other.gameObject); }
             }
             if (other.gameObject.CompareTag("yellowEnemy"))
             {
+                HP.Instance.CountHP(1);
                 if (!switchWeapon) { Destroy(other.gameObject); }
             }
         }
@@ -58,20 +60,20 @@ public class LeftWeapon : MonoBehaviour
     }
     // Update is called once per frame
     public void SwitchLeftEvent()
-    {      
-            //     ChangeCountL++;
-            // if(ChangeCountL%2==1){
-            //     SwordHeadL.SetActive(false);
-            // }else{
-            //      SwordHeadL.SetActive(true);
-            // }            
-            switchWeapon = !switchWeapon;
-            Sword.SetActive(false);
-            NextSword.SetActive(true);
-            changeSword = Sword;
-            Sword = NextSword;
-            NextSword = changeSword;
-            // audiosource.PlayOneShot(impact);
+    {
+        //     ChangeCountL++;
+        // if(ChangeCountL%2==1){
+        //     SwordHeadL.SetActive(false);
+        // }else{
+        //      SwordHeadL.SetActive(true);
+        // }            
+        switchWeapon = !switchWeapon;
+        Sword.SetActive(false);
+        NextSword.SetActive(true);
+        changeSword = Sword;
+        Sword = NextSword;
+        NextSword = changeSword;
+        // audiosource.PlayOneShot(impact);
     }
     public void SwitchRightEvent(bool n)
     {
