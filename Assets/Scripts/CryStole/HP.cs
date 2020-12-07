@@ -39,7 +39,7 @@ public class HP : MonoBehaviour
         }
         if (hpCount <= 0)
         {
-            Debug.Log("LOSE");
+            //血量歸零遊戲輸了
             hpCount = 0;
         }
     }
