@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckUserInput : MonoBehaviour
 {
+public GameObject UIMenu;
     public bool menu =false;
     public static CheckUserInput Instance;
     // public AudioSource audioSource;
@@ -54,6 +55,7 @@ public class CheckUserInput : MonoBehaviour
         isPaused = true;
         Canvas_HUD.enabled = false;
         Canvas_Paused.enabled = true;
+        UIMenu.SetActive(true);
     }
 
     void ResumeGame()
@@ -63,6 +65,6 @@ public class CheckUserInput : MonoBehaviour
         isPaused = false;
         Canvas_HUD.enabled = true;
         Canvas_Paused.enabled = false;
-        Debug.Log("ResumeGame");
+        UIMenu.SetActive(false);
     }
 }
