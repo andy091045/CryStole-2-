@@ -8,7 +8,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6892777677488886676}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 154.65686, y: 5.906185, z: 25.349567}
@@ -93,7 +93,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 27530486796ef5c458d5b3160ac384e3,
         type: 3}
       propertyPath: m_Name
-      value: Macuahuitl_Metal
+      value: Macuahuitl_Metal Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 27530486796ef5c458d5b3160ac384e3,
+        type: 3}
+      propertyPath: m_TagString
+      value: BlueWeapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27530486796ef5c458d5b3160ac384e3, type: 3}

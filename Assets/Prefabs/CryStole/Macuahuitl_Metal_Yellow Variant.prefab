@@ -84,6 +84,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Macuahuitl_Metal_Yellow Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3666343651578606488, guid: 2dad5c529a3ea09439fd9eabaf61a30d,
+        type: 3}
+      propertyPath: m_TagString
+      value: YellowWeapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dad5c529a3ea09439fd9eabaf61a30d, type: 3}
 --- !u!1 &985427850757111505 stripped

@@ -27,7 +27,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!1001 &239912321189112087
 PrefabInstance:
@@ -36,6 +36,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1720450471406187500, guid: 0bfdd353c6bf6e940b377d85419c1561,
+        type: 3}
+      propertyPath: enemyType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3917534780388896614, guid: 0bfdd353c6bf6e940b377d85419c1561,
         type: 3}
       propertyPath: m_Size.x
@@ -59,7 +64,7 @@ PrefabInstance:
     - target: {fileID: 3917534780388896614, guid: 0bfdd353c6bf6e940b377d85419c1561,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6347613878575577580, guid: 0bfdd353c6bf6e940b377d85419c1561,
         type: 3}

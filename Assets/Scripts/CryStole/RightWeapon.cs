@@ -34,43 +34,43 @@ public class RightWeapon : MonoBehaviour
         audiosource = GetComponent<AudioSource>();
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        //右手武器只能攻擊右手屬性敵人
-        if (playerType == PlayerType.RightType)
-        {
-            // if (other.gameObject.CompareTag("RightEnemy"))
-            // {
-            //         if(ChangeCount%2==0){
-            //         if((SwordHead.transform.position.x-PrePosition.x)<2&&(SwordHead.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
-            //     }else{
-            //         Destroy(other.gameObject);//銷毀
-            //     }                 
-            // }
-            if (other.gameObject.CompareTag("blueEnemy"))
-            {
-                HP.Instance.CountHP(1);
-                ShockController.Instance.Shock(0.3f,1);
-                if (switchWeapon) { Destroy(other.gameObject); }
-            }
-            if (other.gameObject.CompareTag("purpleEnemy"))
-            {
-                HP.Instance.CountHP(1);
-                ShockController.Instance.Shock(0.3f,1);
-                if (!switchWeapon) { Destroy(other.gameObject); }
-            }
-        }
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     //右手武器只能攻擊右手屬性敵人
+    //     if (playerType == PlayerType.RightType)
+    //     {
+    //         // if (other.gameObject.CompareTag("RightEnemy"))
+    //         // {
+    //         //         if(ChangeCount%2==0){
+    //         //         if((SwordHead.transform.position.x-PrePosition.x)<2&&(SwordHead.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
+    //         //     }else{
+    //         //         Destroy(other.gameObject);//銷毀
+    //         //     }                 
+    //         // }
+    //         if (other.gameObject.CompareTag("blueEnemy"))
+    //         {
+    //             HP.Instance.CountHP(1);
+    //             ShockController.Instance.Shock(0.3f,1);
+    //             if (switchWeapon) { Destroy(other.gameObject); }
+    //         }
+    //         if (other.gameObject.CompareTag("purpleEnemy"))
+    //         {
+    //             HP.Instance.CountHP(1);
+    //             ShockController.Instance.Shock(0.3f,1);
+    //             if (!switchWeapon) { Destroy(other.gameObject); }
+    //         }
+    //     }
 
-        // if (other.name == "Controller (right)" || other.name == "Controller (left)")
-        // {
-        //     Debug.Log("Change!");
-        //     Sword.SetActive(false);
-        //     NextSword.SetActive(true);
-        //     changeSword = Sword;
-        //     Sword = NextSword;
-        //     NextSword = changeSword;
-        // }
-    }
+    //     // if (other.name == "Controller (right)" || other.name == "Controller (left)")
+    //     // {
+    //     //     Debug.Log("Change!");
+    //     //     Sword.SetActive(false);
+    //     //     NextSword.SetActive(true);
+    //     //     changeSword = Sword;
+    //     //     Sword = NextSword;
+    //     //     NextSword = changeSword;
+    //     // }
+    // }
     public void SwitchRightEvent()
     {
         if (playerType == PlayerType.RightType)

@@ -32,34 +32,34 @@ public class LeftWeapon : MonoBehaviour
         audiosource = GetComponent<AudioSource>();
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        //左手武器只能攻擊左手屬性敵人
-        if (playerType == PlayerType.LeftType)
-        {
-            // if (other.gameObject.CompareTag("LeftEnemy"))
-            // {
-            //         if(ChangeCountL%2==0){
-            //         if((SwordHeadL.transform.position.x-PrePosition.x)<2&&(SwordHeadL.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
-            //     }else{
-            //         Destroy(other.gameObject);
-            //     }                   
-            // }
-            if (other.gameObject.CompareTag("redEnemy"))
-            {
-                HP.Instance.CountHP(1);
-                ShockController.Instance.Shock(0.3f,2);
-                if (switchWeapon) { Destroy(other.gameObject); }
-            }
-            if (other.gameObject.CompareTag("yellowEnemy"))
-            {
-                HP.Instance.CountHP(1);
-                ShockController.Instance.Shock(0.3f,2);
-                if (!switchWeapon) { Destroy(other.gameObject); }
-            }
-        }
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     //左手武器只能攻擊左手屬性敵人
+    //     if (playerType == PlayerType.LeftType)
+    //     {
+    //         // if (other.gameObject.CompareTag("LeftEnemy"))
+    //         // {
+    //         //         if(ChangeCountL%2==0){
+    //         //         if((SwordHeadL.transform.position.x-PrePosition.x)<2&&(SwordHeadL.transform.position.y-PrePosition.y)<2){Destroy(other.gameObject);}
+    //         //     }else{
+    //         //         Destroy(other.gameObject);
+    //         //     }                   
+    //         // }
+    //         if (other.gameObject.CompareTag("redEnemy"))
+    //         {
+    //             HP.Instance.CountHP(1);
+    //             ShockController.Instance.Shock(0.3f,2);
+    //             if (switchWeapon) { Destroy(other.gameObject); }
+    //         }
+    //         if (other.gameObject.CompareTag("yellowEnemy"))
+    //         {
+    //             HP.Instance.CountHP(1);
+    //             ShockController.Instance.Shock(0.3f,2);
+    //             if (!switchWeapon) { Destroy(other.gameObject); }
+    //         }
+    //     }
 
-    }
+    // }
     // Update is called once per frame
     public void SwitchLeftEvent()
     {
