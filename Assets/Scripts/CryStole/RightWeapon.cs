@@ -50,11 +50,13 @@ public class RightWeapon : MonoBehaviour
             if (other.gameObject.CompareTag("blueEnemy"))
             {
                 HP.Instance.CountHP(1);
+                ShockController.Instance.Shock(0.3f,1);
                 if (switchWeapon) { Destroy(other.gameObject); }
             }
             if (other.gameObject.CompareTag("purpleEnemy"))
             {
                 HP.Instance.CountHP(1);
+                ShockController.Instance.Shock(0.3f,1);
                 if (!switchWeapon) { Destroy(other.gameObject); }
             }
         }

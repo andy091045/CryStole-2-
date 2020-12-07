@@ -48,11 +48,13 @@ public class LeftWeapon : MonoBehaviour
             if (other.gameObject.CompareTag("redEnemy"))
             {
                 HP.Instance.CountHP(1);
+                ShockController.Instance.Shock(0.3f,2);
                 if (switchWeapon) { Destroy(other.gameObject); }
             }
             if (other.gameObject.CompareTag("yellowEnemy"))
             {
                 HP.Instance.CountHP(1);
+                ShockController.Instance.Shock(0.3f,2);
                 if (!switchWeapon) { Destroy(other.gameObject); }
             }
         }
