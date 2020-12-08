@@ -87,10 +87,11 @@ public class RightWeapon : MonoBehaviour
                 // {
                 //     SwordHead.SetActive(true);
                 // }
-                Instantiate(SwitchToBlueParticles, transform.position, Quaternion.identity);
+                
                 switchWeapon = !switchWeapon;
                 Sword.SetActive(false);
                 NextSword.SetActive(true);
+                Instantiate(SwitchToBlueParticles, transform.position, Quaternion.identity, NextSword.transform);
                 changeSword = Sword;
                 Sword = NextSword;
                 NextSword = changeSword;
