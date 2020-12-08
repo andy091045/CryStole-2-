@@ -13,7 +13,8 @@ public class HeadTrailer : MonoBehaviour
     {
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition.transform.position, ref currentVelocity, smoothTime, maxSpeed);
     }
-    void OnTriggerEnter(Collider other){
+    void OnTriggerEnter(Collider other)
+    {
         //碰到障礙物扣血
         //  if (other.gameObject.CompareTag("BlockObject"))
         //     {

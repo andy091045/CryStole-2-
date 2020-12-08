@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RightWeapon : MonoBehaviour
 {
+    public ParticleSystem SwitchToBlueParticles;
     int CountPause = 0;
     public static RightWeapon Instance; //設定全域變數
     public Vector3 PrePosition;
@@ -86,6 +87,7 @@ public class RightWeapon : MonoBehaviour
                 // {
                 //     SwordHead.SetActive(true);
                 // }
+                Instantiate(SwitchToBlueParticles, transform.position, Quaternion.identity);
                 switchWeapon = !switchWeapon;
                 Sword.SetActive(false);
                 NextSword.SetActive(true);

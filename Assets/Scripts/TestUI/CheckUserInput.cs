@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CheckUserInput : MonoBehaviour
 {
-public GameObject UIMenu;
-    public bool menu =false;
+    public GameObject UIMenu;
+    public bool menu = false;
     public static CheckUserInput Instance;
     // public AudioSource audioSource;
     bool isPaused = false;
@@ -34,8 +34,9 @@ public GameObject UIMenu;
 
     public void CheckUser()
     {
-        
-       if(menu==true){
+
+        if (menu == true)
+        {
             if (Time.timeScale == 1)
             {
                 PauseGame();
@@ -44,9 +45,9 @@ public GameObject UIMenu;
             {
                 ResumeGame();
             }
-            menu=false;
-       }
-        
+            menu = false;
+        }
+
     }
     void PauseGame()
     {

@@ -15,12 +15,13 @@ public class TimeCount : MonoBehaviour
     void Update()
     {
         timer = timer + Time.deltaTime;
-        if(timer>=1f){
-             LeftWeapon.Instance.ChangePosition();
-             RightWeapon.Instance.ChangePosition();
-            timer=0f;           
+        if (timer >= 1f)
+        {
+            LeftWeapon.Instance.ChangePosition();
+            RightWeapon.Instance.ChangePosition();
+            timer = 0f;
         }
-          
-        
+
+
     }
 }
