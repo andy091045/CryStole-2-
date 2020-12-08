@@ -41,6 +41,12 @@ PrefabInstance:
       propertyPath: enemyType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1720450471406187500, guid: 0bfdd353c6bf6e940b377d85419c1561,
+        type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 6252061217285380832, guid: 1495ad2af70afa74aa2595af70555769,
+        type: 3}
     - target: {fileID: 3917534780388896614, guid: 0bfdd353c6bf6e940b377d85419c1561,
         type: 3}
       propertyPath: m_Size.x

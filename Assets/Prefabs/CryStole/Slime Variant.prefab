@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b35f57fe15d7342857a36e6f75d823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathParticles: {fileID: 6252061217285380832, guid: 5434d713912134547aa4001a7f186e14,
+  deathParticles: {fileID: 6252061217285380832, guid: dfd86f369a7f74349ba71a7644a5e82d,
     type: 3}
   enemyType: 2
 --- !u!1001 &3113865477719941349
