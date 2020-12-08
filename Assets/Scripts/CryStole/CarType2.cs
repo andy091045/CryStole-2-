@@ -10,11 +10,12 @@ public class CarType2 : MonoBehaviour
 
     // public  StartofPathInstruction start;
     public EndOfPathInstruction end;
-    public float speed = 5;
+    public float speed = 10;
     float distanceTravelled;
     // Start is called before the first frame update
-    private void Awake() {
-    Instance =this;    
+    private void Awake()
+    {
+        Instance = this;
     }
     void Start()
     {
