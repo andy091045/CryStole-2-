@@ -5,6 +5,7 @@ using PathCreation;
 
 public class CarType2 : MonoBehaviour
 {
+    public static CarType2 Instance;
     public PathCreator pathCreator;
 
     // public  StartofPathInstruction start;
@@ -12,6 +13,9 @@ public class CarType2 : MonoBehaviour
     public float speed = 5;
     float distanceTravelled;
     // Start is called before the first frame update
+    private void Awake() {
+    Instance =this;    
+    }
     void Start()
     {
         // You can now access the vertex path with pathCreator.path
