@@ -64,7 +64,7 @@ public class CheckUserInput : MonoBehaviour
         UIMenu.SetActive(true);
     }
 
-    void ResumeGame()
+   public void ResumeGame()
     {
         Time.timeScale = 1;
         // audioSource.Play();
