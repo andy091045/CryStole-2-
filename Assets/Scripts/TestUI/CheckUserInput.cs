@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(AudioSource))]
 
 public class CheckUserInput : MonoBehaviour
 {   
+    AudioSource audiosource;
+    public AudioClip impact;
     public GameObject UIMenu;
     public bool menu = false;
     public static CheckUserInput Instance;
@@ -22,6 +24,7 @@ public class CheckUserInput : MonoBehaviour
     }
     void Start()
     {
+        audiosource = GetComponent<AudioSource>();
         Canvas_Paused.enabled = false;
         Canvas_Lose.enabled = false;
         Canvas_End.enabled = false;
@@ -57,7 +60,7 @@ public class CheckUserInput : MonoBehaviour
     void PauseGame()
     {
         Time.timeScale = 0;
-        // audioSource.Pause();
+        audiosource.Pause();
         isPaused = true;
         Canvas_HUD.enabled = false;
         Canvas_Paused.enabled = true;
@@ -67,7 +70,7 @@ public class CheckUserInput : MonoBehaviour
    public void ResumeGame()
     {
         Time.timeScale = 1;
-        // audioSource.Play();
+        audiosource.Play();
         isPaused = false;
         Canvas_HUD.enabled = true;
         Canvas_Paused.enabled = false;
@@ -83,6 +86,9 @@ public class CheckUserInput : MonoBehaviour
         UIMenu.SetActive(true);
         RightWeapon.Instance.PauseChange();
        Canvas_End.enabled = true;  
+    }
+    public void PlayMusic(){
+        audiosource.PlayOneShot(impact);
     }
      //管理canvas、ui的管理，功能有暫停遊戲呼叫選單，跳出輸掉畫面，跳出結算畫面
 }

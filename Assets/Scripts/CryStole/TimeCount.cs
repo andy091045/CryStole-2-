@@ -40,7 +40,7 @@ public class TimeCount : MonoBehaviour
         if (timerN == 0)
         {
             CarType2.Instance.speed = 10;
-            audiosource.PlayOneShot(impact);
+            CheckUserInput.Instance.PlayMusic();
             CancelInvoke("timer");
             Destroy(HP_UI.gameObject);
         }
