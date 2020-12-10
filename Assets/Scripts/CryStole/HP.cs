@@ -5,6 +5,7 @@ using TMPro;
 
 public class HP : MonoBehaviour
 {
+    public bool deadappear = false;
     public static HP Instance;
     int hpCount = 50;
     public GameObject HP_UI;
@@ -39,7 +40,10 @@ public class HP : MonoBehaviour
         }
         if (hpCount <= 0)
         {
-            CheckUserInput.Instance.LoseGame();
+            if (deadappear)
+            {
+                CheckUserInput.Instance.LoseGame();
+            }
             hpCount = 0;
         }
     }

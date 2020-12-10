@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+[RequireComponent(typeof(AudioSource))]
 public class TimeCount : MonoBehaviour
 {
+    public AudioClip impact;
+    AudioSource audiosource;
     public GameObject HP_UI;
     int timerN = 5;
     // Start is called before the first frame update
     void Start()
     {
+        audiosource = GetComponent<AudioSource>();
         CarType2.Instance.speed = 0.1f;
         InvokeRepeating("timer", 1, 1);
     }
@@ -36,6 +40,7 @@ public class TimeCount : MonoBehaviour
         if (timerN == 0)
         {
             CarType2.Instance.speed = 10;
+            audiosource.PlayOneShot(impact);
             CancelInvoke("timer");
             Destroy(HP_UI.gameObject);
         }
