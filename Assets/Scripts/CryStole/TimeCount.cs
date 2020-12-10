@@ -2,14 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class TimeCount : MonoBehaviour
 {
+    public Image fadeImage;
     public GameObject HP_UI;
     int timerN = 5;
     // Start is called before the first frame update
     void Start()
     {
         CarType2.Instance.speed = 0.1f;
+        StartCoroutine(Change());
+    }
+    IEnumerator Change()
+    {
+        while (fadeImage.color.a > 0)
+        {
+            //一開始是1
+            float myAlpha = fadeImage.color.a - 0.01f;
+            //R					//G					//B			  //Alpha
+            fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, myAlpha);
+
+            yield return new WaitForSeconds(0.01f);
+
+        }
         InvokeRepeating("timer", 1, 1);
     }
 
