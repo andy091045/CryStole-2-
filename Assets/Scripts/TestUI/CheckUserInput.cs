@@ -77,12 +77,14 @@ public class CheckUserInput : MonoBehaviour
         UIMenu.SetActive(false);
     }
     public void LoseGame(){
+        audiosource.Pause();
         CarType2.Instance.speed=0;
         UIMenu.SetActive(true);
         RightWeapon.Instance.PauseChange();
         Canvas_Lose.enabled = true;
     }
     public void EndGame(){
+        audiosource.Pause();
         UIMenu.SetActive(true);
         RightWeapon.Instance.PauseChange();
        Canvas_End.enabled = true;  
