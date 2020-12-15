@@ -101,7 +101,7 @@ public class CheckUserInput : MonoBehaviour
     }
     public void PlayMusic()
     {
-        audiosource.PlayOneShot(impact);
+        audiosource.Play();
     }
     //管理canvas、ui的管理，功能有暫停遊戲呼叫選單，跳出輸掉畫面，跳出結算畫面
 }
