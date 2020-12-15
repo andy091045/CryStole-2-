@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-        public void changeScene(string sceneName){
-        Application.LoadLevel(sceneName);      
+    public void changeScene(string sceneName)
+    {
+        Application.LoadLevel(sceneName);
         //重新設定遊玩
-        CheckUserInput.Instance.ResumeGame();
-    }    
+        CheckUserInput.Instance.ReStartGame();
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 
 public class CheckUserInput : MonoBehaviour
-{   
+{
     AudioSource audiosource;
     public AudioClip impact;
     public GameObject UIMenu;
@@ -67,7 +67,7 @@ public class CheckUserInput : MonoBehaviour
         UIMenu.SetActive(true);
     }
 
-   public void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1;
         audiosource.Play();
@@ -76,21 +76,32 @@ public class CheckUserInput : MonoBehaviour
         Canvas_Paused.enabled = false;
         UIMenu.SetActive(false);
     }
-    public void LoseGame(){
+    public void ReStartGame()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
+        Canvas_HUD.enabled = true;
+        Canvas_Paused.enabled = false;
+        UIMenu.SetActive(false);
+    }
+    public void LoseGame()
+    {
         audiosource.Pause();
-        CarType2.Instance.speed=0;
+        CarType2.Instance.speed = 0;
         UIMenu.SetActive(true);
         RightWeapon.Instance.PauseChange();
         Canvas_Lose.enabled = true;
     }
-    public void EndGame(){
+    public void EndGame()
+    {
         audiosource.Pause();
         UIMenu.SetActive(true);
         RightWeapon.Instance.PauseChange();
-       Canvas_End.enabled = true;  
+        Canvas_End.enabled = true;
     }
-    public void PlayMusic(){
+    public void PlayMusic()
+    {
         audiosource.PlayOneShot(impact);
     }
-     //管理canvas、ui的管理，功能有暫停遊戲呼叫選單，跳出輸掉畫面，跳出結算畫面
+    //管理canvas、ui的管理，功能有暫停遊戲呼叫選單，跳出輸掉畫面，跳出結算畫面
 }
