@@ -19,7 +19,7 @@ public class MappingCreator : MonoBehaviour
         data = JsonUtility.FromJson<Music2>(mapping.text);
         for (int i = 0; i <= 111; i++)
         {
-            if (data._notes[i]._type == 0)
+            if (data._notes[i]._cutDirection == 0)
             {
                 GameObject cube = LeanPool.Spawn(cubes[0], points[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
                 Vector3 move = cube.transform.position;
@@ -31,7 +31,7 @@ public class MappingCreator : MonoBehaviour
                 Debug.Log(i + ":" + move);
                 cube.transform.position = move;
             }
-            else if (data._notes[i]._type == 1)
+            else if (data._notes[i]._cutDirection == 1)
             {
                 GameObject cube = LeanPool.Spawn(cubes[1], points[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
                 Vector3 move = cube.transform.position;
@@ -42,7 +42,7 @@ public class MappingCreator : MonoBehaviour
                 }
                 cube.transform.position = move;
             }
-            else if (data._notes[i]._type == 2)
+            else if (data._notes[i]._cutDirection == 2)
             {
                 GameObject cube = LeanPool.Spawn(cubes[2], points[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
                 Vector3 move = cube.transform.position;
@@ -70,7 +70,7 @@ public class MappingCreator : MonoBehaviour
         for (int i = 112; i < 1000; i++)
         {
             // Debug.Log(i + ":" + data._notes[i]._type);
-            if (data._notes[i]._type == 0)
+            if (data._notes[i]._cutDirection == 0)
             {
                 GameObject cube = LeanPool.Spawn(cubes[0], points2[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
                 Vector3 move = cube.transform.position;
@@ -83,7 +83,7 @@ public class MappingCreator : MonoBehaviour
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }
-            else if (data._notes[i]._type == 1)
+            else if (data._notes[i]._cutDirection == 1)
             {
                 GameObject cube = LeanPool.Spawn(cubes[1], points2[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
                 Vector3 move = cube.transform.position;
@@ -96,7 +96,7 @@ public class MappingCreator : MonoBehaviour
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }
-            else if (data._notes[i]._type == 2)
+            else if (data._notes[i]._cutDirection == 2)
             {
                 GameObject cube = LeanPool.Spawn(cubes[2], points2[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
                 Vector3 move = cube.transform.position;
