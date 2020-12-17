@@ -55,7 +55,7 @@ public class MappingCreator : MonoBehaviour
             }
             else
             {
-                //不要用數值，把他抽成變數，減少自己的工作量，子傑有講喔
+                //不要用數值，把他抽成變數，減少自己的工作量，子傑有講喔，不要再犯了
                 GameObject cube = LeanPool.Spawn(cubes[3], points[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
                 Vector3 move = cube.transform.position;
                 move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time * 0.46f));
