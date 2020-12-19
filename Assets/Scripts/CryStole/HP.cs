@@ -23,16 +23,16 @@ public class HP : MonoBehaviour
         switch (n)
         {
             case 1:
-                //打到方塊加5分            
-                hpCount += 5;
+                //打到方塊加2分            
+                hpCount += 2;
                 break;
             case 2:
-                //沒打到方塊扣10分
-                hpCount -= 10;
+                //沒打到方塊扣25分
+                hpCount -= 25;
                 break;
             case 3:
                 //撞到障礙物扣30分
-                hpCount -= 30;
+                hpCount -= 50;
                 break;
             default:
                 Debug.Log("錯誤輸入");

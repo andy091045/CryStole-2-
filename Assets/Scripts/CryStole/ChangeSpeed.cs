@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class ChangeSpeed : MonoBehaviour
 {
+    public float changespeed=0;
     public SpeedType speedType;
     private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("碰到了");
+    {        
         if (other.gameObject.CompareTag("Player"))
         {
             if (speedType == SpeedType.AddSpeed)
             {
-                CarType2.Instance.speed = 11.45f;
+                CarType2.Instance.speed = changespeed;
             }
             if (speedType == SpeedType.MinusSpeed)
             {
-                CarType2.Instance.speed = 10;
+                CarType2.Instance.speed = changespeed;
             }
         }
     }
