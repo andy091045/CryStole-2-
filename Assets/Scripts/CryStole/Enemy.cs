@@ -4,8 +4,25 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public Renderer[] render;
+    public int MostRenderNumbers;
+    bool hide = true;
     public ParticleSystem deathParticles;
     public EnemyType enemyType;
+    float timer = 0;
+    // private void Start()
+    // {
+    //     for (int i = 0; i < MostRenderNumbers; i++)
+    //     {
+    //         render[i].enabled = false;
+    //     }
+    // }
+    // private void Update()
+    // {
+    //     timer = timer + Time.deltaTime;
+
+    // }
+
     void OnTriggerEnter(Collider other)
     {
         if (enemyType == EnemyType.BlueType)

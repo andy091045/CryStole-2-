@@ -17,7 +17,7 @@ public class MappingCreator : MonoBehaviour
     void Start()
     {
         data = JsonUtility.FromJson<Music2>(mapping.text);
-        for (int i = 0; i <= 111; i++)
+        for (int i = 0; i <= 130; i++)
         {
             if (data._notes[i]._cutDirection == 0)
             {
@@ -67,7 +67,7 @@ public class MappingCreator : MonoBehaviour
             }
         }
 
-        for (int i = 112; i < 1000; i++)
+        for (int i = 131; i < 1000; i++)
         {
             // Debug.Log(i + ":" + data._notes[i]._type);
             if (data._notes[i]._cutDirection == 0)
