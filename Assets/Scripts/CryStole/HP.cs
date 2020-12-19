@@ -27,8 +27,8 @@ public class HP : MonoBehaviour
                 hpCount += 2;
                 break;
             case 2:
-                //沒打到方塊扣25分
-                hpCount -= 25;
+                //沒打到方塊扣20分
+                hpCount -= 20;
                 break;
             case 3:
                 //撞到障礙物扣30分
