@@ -17,7 +17,7 @@ public class MappingCreator : MonoBehaviour
     void Start()
     {
         data = JsonUtility.FromJson<Music2>(mapping.text);
-        for (int i = 0; i <= 130; i++)
+        for (int i = 0; i <= 113; i++)
         {
             if (data._notes[i]._cutDirection == 0)
             {
@@ -40,6 +40,7 @@ public class MappingCreator : MonoBehaviour
                 {
                     move.y += 25.5f;
                 }
+                Debug.Log(i + ":" + move);
                 cube.transform.position = move;
             }
             else if (data._notes[i]._cutDirection == 2)
@@ -51,6 +52,7 @@ public class MappingCreator : MonoBehaviour
                 {
                     move.y += 25.5f;
                 }
+                Debug.Log(i + ":" + move);
                 cube.transform.position = move;
             }
             else
@@ -63,11 +65,12 @@ public class MappingCreator : MonoBehaviour
                 {
                     move.y += 25.5f;
                 }
+                Debug.Log(i + ":" + move);
                 cube.transform.position = move;
             }
         }
 
-        for (int i = 131; i < 1000; i++)
+        for (int i = 114; i < 1000; i++)
         {
             // Debug.Log(i + ":" + data._notes[i]._type);
             if (data._notes[i]._cutDirection == 0)
