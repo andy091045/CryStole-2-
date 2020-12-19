@@ -77,7 +77,7 @@ public class MappingCreator : MonoBehaviour
                 move = new Vector3((move.x + 10 * data._notes[i]._time * 0.46f) - 431.0f, move.y, move.z);
                 if (move.x > 235.0f)
                 {
-                    move.y -= 25.0f;
+                    move.y -= 26.0f;
                 }
                 cube.transform.position = move;
                 //物體旋轉
@@ -90,7 +90,7 @@ public class MappingCreator : MonoBehaviour
                 move = new Vector3((move.x + 10 * data._notes[i]._time * 0.46f) - 431.0f, move.y, move.z);
                 if (move.x > 235.0f)
                 {
-                    move.y -= 25.0f;
+                    move.y -= 26.0f;
                 }
                 cube.transform.position = move;
                 //物體旋轉
@@ -103,7 +103,7 @@ public class MappingCreator : MonoBehaviour
                 move = new Vector3((move.x + 10 * data._notes[i]._time * 0.46f) - 431.0f, move.y, move.z);
                 if (move.x > 235.0f)
                 {
-                    move.y -= 25.0f;
+                    move.y -= 26.0f;
                 }
                 cube.transform.position = move;
                 //物體旋轉
@@ -116,7 +116,7 @@ public class MappingCreator : MonoBehaviour
                 move = new Vector3((move.x + 10 * data._notes[i]._time * 0.46f) - 431.0f, move.y, move.z);
                 if (move.x > 235.0f)
                 {
-                    move.y -= 25.0f;
+                    move.y -= 26.0f;
                 }
                 cube.transform.position = move;
                 //物體旋轉
