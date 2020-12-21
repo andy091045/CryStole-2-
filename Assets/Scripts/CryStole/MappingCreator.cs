@@ -30,7 +30,7 @@ public class MappingCreator : MonoBehaviour
                 {
                     move.y += 25.5f;
                 }
-                Debug.Log(i + ":" + move);
+                // Debug.Log(i + ":" + move);
                 cube.transform.position = move;
             }
             else if (data._notes[i]._cutDirection == 1)
@@ -42,7 +42,7 @@ public class MappingCreator : MonoBehaviour
                 {
                     move.y += 25.5f;
                 }
-                Debug.Log(i + ":" + move);
+                // Debug.Log(i + ":" + move);
                 cube.transform.position = move;
             }
             else if (data._notes[i]._cutDirection == 2)
@@ -54,7 +54,7 @@ public class MappingCreator : MonoBehaviour
                 {
                     move.y += 25.5f;
                 }
-                Debug.Log(i + ":" + move);
+                // Debug.Log(i + ":" + move);
                 cube.transform.position = move;
             }
             else
@@ -67,7 +67,7 @@ public class MappingCreator : MonoBehaviour
                 {
                     move.y += 25.5f;
                 }
-                Debug.Log(i + ":" + move);
+                // Debug.Log(i + ":" + move);
                 cube.transform.position = move;
             }
         }
@@ -85,7 +85,7 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 26.0f;
                 }
                 cube.transform.position = move;
-                Debug.Log(i + ":" + move);
+                // Debug.Log(i + ":" + move);
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }
@@ -99,7 +99,7 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 26.0f;
                 }
                 cube.transform.position = move;
-                Debug.Log(i + ":" + move);
+                // Debug.Log(i + ":" + move);
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }
@@ -113,7 +113,7 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 26.0f;
                 }
                 cube.transform.position = move;
-                Debug.Log(i + ":" + move);
+                // Debug.Log(i + ":" + move);
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }
@@ -127,7 +127,7 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 26.0f;
                 }
                 cube.transform.position = move;
-                Debug.Log(i + ":" + move);
+                // Debug.Log(i + ":" + move);
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }

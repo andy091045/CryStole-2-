@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 [RequireComponent(typeof(AudioSource))]
 
 public class CheckUserInput : MonoBehaviour
 {
     //這個東西放在 CAR -> VR選單按紐 -> UI切換
+    //DEBUG
+    public GameObject HP_UI;
+    int timerN = 5;
     //輸掉遊戲不能在按Paused
-    public bool cannotPaused =false;
+    public bool cannotPaused = true;
     AudioSource audiosource;
     public AudioClip impact;
     public GameObject UIMenu;
@@ -32,6 +36,9 @@ public class CheckUserInput : MonoBehaviour
         Canvas_Paused.enabled = false;
         Canvas_Lose.enabled = false;
         Canvas_End.enabled = false;
+
+        CarType2.Instance.speed = 0.1f;
+        InvokeRepeating("timer", 1, 1);
     }
 
     // Update is called once per frame
@@ -76,7 +83,7 @@ public class CheckUserInput : MonoBehaviour
         Time.timeScale = 1;
         audiosource.Play();
         isPaused = false;
-        cannotPaused=false;
+        cannotPaused = false;
         Canvas_HUD.enabled = true;
         Canvas_Paused.enabled = false;
         UIMenu.SetActive(false);
@@ -98,7 +105,8 @@ public class CheckUserInput : MonoBehaviour
         Canvas_Lose.enabled = true;
     }
     public void EndGame()
-    {
+    {   
+        cannotPaused = true;
         audiosource.Pause();
         UIMenu.SetActive(true);
         RightWeapon.Instance.PauseChange();
@@ -109,4 +117,22 @@ public class CheckUserInput : MonoBehaviour
         audiosource.Play();
     }
     //管理canvas、ui的管理，功能有暫停遊戲呼叫選單，跳出輸掉畫面，跳出結算畫面
+
+    public void timer()
+    {
+
+        timerN -= 1;
+
+        HP_UI.GetComponent<TMP_Text>().text = timerN + " ";
+
+        if (timerN == 0)
+        {
+            CarType2.Instance.speed = 10;
+            CheckUserInput.Instance.PlayMusic();
+            cannotPaused = false;
+            CancelInvoke("timer");
+            Destroy(HP_UI.gameObject);
+        }
+
+    }
 }
