@@ -8,7 +8,7 @@ public class MappingCreator : MonoBehaviour
 {
     float timer = 0;
     //objectNumbers 為怪物音符總數量
-    public int objectNumbers=0;
+    public int objectNumbers = 0;
     public GameObject[] cubes;
     public Transform[] points;
     public Transform[] points2;
@@ -18,6 +18,9 @@ public class MappingCreator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //之後要做
+        //資料要餵進去enemy如: 位置、時間、類別
+        //在mappingCreater裡建立一個list去管理所有enemy，方便別人對enemy進行操作
         data = JsonUtility.FromJson<Music2>(mapping.text);
         for (int i = 0; i <= 113; i++)
         {
