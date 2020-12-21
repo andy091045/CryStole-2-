@@ -1104,7 +1104,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!43 &27556477
+--- !u!43 &31164316
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32803,7 +32803,7 @@ PrefabInstance:
     - target: {fileID: 6678917390203174128, guid: e21ec3663c02a2547b4ca22e216e7c31,
         type: 3}
       propertyPath: m_Text
-      value: Menu
+      value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 6678917390261594091, guid: e21ec3663c02a2547b4ca22e216e7c31,
         type: 3}
@@ -32913,7 +32913,7 @@ PrefabInstance:
     - target: {fileID: 6678917390429942548, guid: e21ec3663c02a2547b4ca22e216e7c31,
         type: 3}
       propertyPath: m_Name
-      value: Menu
+      value: Home
       objectReference: {fileID: 0}
     - target: {fileID: 6678917390429942569, guid: e21ec3663c02a2547b4ca22e216e7c31,
         type: 3}
@@ -32924,6 +32924,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FillCenter
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678917390429942570, guid: e21ec3663c02a2547b4ca22e216e7c31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678917390429942570, guid: e21ec3663c02a2547b4ca22e216e7c31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 837813441}
+    - target: {fileID: 6678917390429942570, guid: e21ec3663c02a2547b4ca22e216e7c31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678917390429942570, guid: e21ec3663c02a2547b4ca22e216e7c31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678917390429942570, guid: e21ec3663c02a2547b4ca22e216e7c31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678917390429942570, guid: e21ec3663c02a2547b4ca22e216e7c31,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 6678917390429942571, guid: e21ec3663c02a2547b4ca22e216e7c31,
         type: 3}
@@ -32968,6 +32998,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d63d0b51d1e634f4797844ed0b4151e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &837813440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6678917390429942548, guid: e21ec3663c02a2547b4ca22e216e7c31,
+    type: 3}
+  m_PrefabInstance: {fileID: 837813437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &837813441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837813440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d06a92ad8b5194fbc847a1714c8ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &838882788
@@ -45797,40 +45845,6 @@ Transform:
   m_Father: {fileID: 1348955072}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1151071743
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1151848282
 GameObject:
   m_ObjectHideFlags: 0
@@ -55839,6 +55853,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1718596517}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1420406101
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1422601921
 GameObject:
   m_ObjectHideFlags: 0
@@ -90319,12 +90367,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1151071743}
+      objectReference: {fileID: 1420406101}
     - target: {fileID: 1688512034185921010, guid: 52f5309414155f4458d6cd40c74d267a,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 27556477}
+      objectReference: {fileID: 31164316}
     - target: {fileID: 1688512034186834822, guid: 52f5309414155f4458d6cd40c74d267a,
         type: 3}
       propertyPath: m_IsActive
