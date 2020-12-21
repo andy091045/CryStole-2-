@@ -47,6 +47,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6252061217285380832, guid: 39fd905c0fb34954283098a0b86dbcf9,
         type: 3}
+    - target: {fileID: -1720450471406187500, guid: 0bfdd353c6bf6e940b377d85419c1561,
+        type: 3}
+      propertyPath: impact
+      value: 
+      objectReference: {fileID: 8300000, guid: 46b8edf7979247f4689362010d7fac09, type: 3}
     - target: {fileID: 890138155, guid: 0bfdd353c6bf6e940b377d85419c1561, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -181,6 +186,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 8845883798768850081, guid: 0bfdd353c6bf6e940b377d85419c1561,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8845883798768850081, guid: 0bfdd353c6bf6e940b377d85419c1561,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 46b8edf7979247f4689362010d7fac09, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bfdd353c6bf6e940b377d85419c1561, type: 3}
 --- !u!1 &6576126050837811451 stripped

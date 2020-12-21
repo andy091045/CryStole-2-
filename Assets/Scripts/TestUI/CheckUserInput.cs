@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CheckUserInput : MonoBehaviour
 {
+    //這個東西放在 CAR -> VR選單按紐 -> UI切換
+    //輸掉遊戲不能在按Paused
+    public bool cannotPaused =false;
     AudioSource audiosource;
     public AudioClip impact;
     public GameObject UIMenu;
@@ -24,6 +27,7 @@ public class CheckUserInput : MonoBehaviour
     }
     void Start()
     {
+        ReStartGame();
         audiosource = GetComponent<AudioSource>();
         Canvas_Paused.enabled = false;
         Canvas_Lose.enabled = false;
@@ -72,6 +76,7 @@ public class CheckUserInput : MonoBehaviour
         Time.timeScale = 1;
         audiosource.Play();
         isPaused = false;
+        cannotPaused=false;
         Canvas_HUD.enabled = true;
         Canvas_Paused.enabled = false;
         UIMenu.SetActive(false);

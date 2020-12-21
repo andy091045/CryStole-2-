@@ -75,7 +75,7 @@ public class LeftWeapon : MonoBehaviour
         changeSword = Sword;
         Sword = NextSword;
         NextSword = changeSword;
-        // audiosource.PlayOneShot(impact);
+        audiosource.PlayOneShot(impact);
     }
     public void SwitchRightEvent(bool n)
     {

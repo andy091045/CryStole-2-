@@ -95,7 +95,7 @@ public class RightWeapon : MonoBehaviour
                 changeSword = Sword;
                 Sword = NextSword;
                 NextSword = changeSword;
-                // audiosource.PlayOneShot(impact);
+                audiosource.PlayOneShot(impact);
             }
         }
     }

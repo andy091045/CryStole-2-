@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public AudioClip impact;
+    AudioSource audiosource;
     public Renderer[] render;
     public int MostRenderNumbers;
     bool hide = true;
@@ -23,6 +25,10 @@ public class Enemy : MonoBehaviour
 
     // }
 
+    void Start()
+    {
+        audiosource = GetComponent<AudioSource>();
+    }
     void OnTriggerEnter(Collider other)
     {
         if (enemyType == EnemyType.BlueType)
@@ -31,12 +37,13 @@ public class Enemy : MonoBehaviour
             {
                 HP.Instance.CountHP(1);
                 ShockController.Instance.Shock(0.3f, 1);
+                // audiosource.PlayOneShot(impact);
                 Destroy();
             }
             if (other.gameObject.CompareTag("Wall"))
             {
                 HP.Instance.CountHP(2);
-                GetHurt.Instance.HurtStarting=true;
+                GetHurt.Instance.HurtStarting = true;
                 Destroy(gameObject);
             }
         }
@@ -47,12 +54,13 @@ public class Enemy : MonoBehaviour
             {
                 HP.Instance.CountHP(1);
                 ShockController.Instance.Shock(0.3f, 1);
+                // audiosource.PlayOneShot(impact);
                 Destroy();
             }
             if (other.gameObject.CompareTag("Wall"))
             {
                 HP.Instance.CountHP(2);
-                GetHurt.Instance.HurtStarting=true;
+                GetHurt.Instance.HurtStarting = true;
                 Destroy(gameObject);
             }
         }
@@ -63,12 +71,14 @@ public class Enemy : MonoBehaviour
             {
                 HP.Instance.CountHP(1);
                 ShockController.Instance.Shock(0.3f, 2);
+                // audiosource.PlayOneShot(impact);
+                Debug.Log("123456789");
                 Destroy();
             }
             if (other.gameObject.CompareTag("Wall"))
             {
                 HP.Instance.CountHP(2);
-                GetHurt.Instance.HurtStarting=true;
+                GetHurt.Instance.HurtStarting = true;
                 Destroy(gameObject);
             }
         }
@@ -79,12 +89,13 @@ public class Enemy : MonoBehaviour
             {
                 HP.Instance.CountHP(1);
                 ShockController.Instance.Shock(0.3f, 2);
+                // audiosource.PlayOneShot(impact);
                 Destroy();
             }
             if (other.gameObject.CompareTag("Wall"))
             {
                 HP.Instance.CountHP(2);
-                GetHurt.Instance.HurtStarting=true;
+                GetHurt.Instance.HurtStarting = true;
                 Destroy(gameObject);
             }
         }

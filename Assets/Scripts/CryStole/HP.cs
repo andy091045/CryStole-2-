@@ -45,6 +45,7 @@ public class HP : MonoBehaviour
         {
             if (deadappear)
             {
+                CheckUserInput.Instance.cannotPaused=true;
                 CheckUserInput.Instance.LoseGame();
             }
             hpCount = 0;
