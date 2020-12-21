@@ -9,6 +9,9 @@ public class ChangeScene : MonoBehaviour
     {
         Application.LoadLevel(sceneName);
         //重新設定遊玩
-        CheckUserInput.Instance.ReStartGame();
+        if(sceneName=="CryStole"){
+CheckUserInput.Instance.ReStartGame();
+        }
+        
     }
 }

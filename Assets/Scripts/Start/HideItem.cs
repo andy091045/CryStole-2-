@@ -10,7 +10,7 @@ public class HideItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= MaxItemAmount; i++)
+        for (int i = 0; i < MaxItemAmount; i++)
         {
             HideItems[i].SetActive(false);
         }
@@ -18,7 +18,7 @@ public class HideItem : MonoBehaviour
 
     public void OpenItems()
     {
-        for (int i = 0; i <= MaxItemAmount; i++)
+        for (int i = 0; i < MaxItemAmount; i++)
         {
             HideItems[i].SetActive(true);
         }
