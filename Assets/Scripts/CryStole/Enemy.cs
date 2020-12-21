@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
             if (other.gameObject.CompareTag("Wall"))
             {
                 HP.Instance.CountHP(2);
+                GetHurt.Instance.HurtStarting=true;
                 Destroy(gameObject);
             }
         }
@@ -51,6 +52,7 @@ public class Enemy : MonoBehaviour
             if (other.gameObject.CompareTag("Wall"))
             {
                 HP.Instance.CountHP(2);
+                GetHurt.Instance.HurtStarting=true;
                 Destroy(gameObject);
             }
         }
@@ -66,6 +68,7 @@ public class Enemy : MonoBehaviour
             if (other.gameObject.CompareTag("Wall"))
             {
                 HP.Instance.CountHP(2);
+                GetHurt.Instance.HurtStarting=true;
                 Destroy(gameObject);
             }
         }
@@ -81,6 +84,7 @@ public class Enemy : MonoBehaviour
             if (other.gameObject.CompareTag("Wall"))
             {
                 HP.Instance.CountHP(2);
+                GetHurt.Instance.HurtStarting=true;
                 Destroy(gameObject);
             }
         }

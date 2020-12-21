@@ -7,6 +7,8 @@ using Lean.Pool;
 public class MappingCreator : MonoBehaviour
 {
     float timer = 0;
+    //objectNumbers 為怪物音符總數量
+    public int objectNumbers=0;
     public GameObject[] cubes;
     public Transform[] points;
     public Transform[] points2;
@@ -70,7 +72,7 @@ public class MappingCreator : MonoBehaviour
             }
         }
 
-        for (int i = 114; i < 1000; i++)
+        for (int i = 114; i <= objectNumbers; i++)
         {
             // Debug.Log(i + ":" + data._notes[i]._type);
             if (data._notes[i]._cutDirection == 0)
@@ -83,6 +85,7 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 26.0f;
                 }
                 cube.transform.position = move;
+                Debug.Log(i + ":" + move);
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }
@@ -96,6 +99,7 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 26.0f;
                 }
                 cube.transform.position = move;
+                Debug.Log(i + ":" + move);
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }
@@ -109,6 +113,7 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 26.0f;
                 }
                 cube.transform.position = move;
+                Debug.Log(i + ":" + move);
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }
@@ -122,6 +127,7 @@ public class MappingCreator : MonoBehaviour
                     move.y -= 26.0f;
                 }
                 cube.transform.position = move;
+                Debug.Log(i + ":" + move);
                 //物體旋轉
                 cube.transform.Rotate(0, 90, 0);
             }

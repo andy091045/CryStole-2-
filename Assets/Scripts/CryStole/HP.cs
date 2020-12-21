@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class HP : MonoBehaviour
@@ -9,6 +10,7 @@ public class HP : MonoBehaviour
     public static HP Instance;
     int hpCount = 50;
     public GameObject HP_UI;
+    public Text PowerNumber;
     private void Awake()
     {
         Instance = this;
@@ -17,6 +19,7 @@ public class HP : MonoBehaviour
     void Update()
     {
         HP_UI.GetComponent<TMP_Text>().text = hpCount + " ";
+        PowerNumber.text = hpCount + " ";
     }
     public void CountHP(int n)
     {
