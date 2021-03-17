@@ -23,16 +23,16 @@ public class PlayerUIButton : MonoBehaviour
 
     void OnEnable()
     {
-        SteamVrLaserPointer.PointerClick += SteamVrLaserPointer_PointerClick;
-        SteamVrLaserPointer.PointerIn += SteamVrLaserPointer_PointerIn;
-        SteamVrLaserPointer.PointerOut += SteamVrLaserPointer_PointerOut;
+        SteamVrLaserPointer.PointerClick += SteamVrLaserPointerClick;
+        SteamVrLaserPointer.PointerIn += SteamVrLaserPointerIn;
+        SteamVrLaserPointer.PointerOut += SteamVrLaserPointerOut;
     }
 
     void OnDestroy()
     {
-        SteamVrLaserPointer.PointerClick -= SteamVrLaserPointer_PointerClick;
-        SteamVrLaserPointer.PointerIn -= SteamVrLaserPointer_PointerIn;
-        SteamVrLaserPointer.PointerOut -= SteamVrLaserPointer_PointerOut;
+        SteamVrLaserPointer.PointerClick -= SteamVrLaserPointerClick;
+        SteamVrLaserPointer.PointerIn -= SteamVrLaserPointerIn;
+        SteamVrLaserPointer.PointerOut -= SteamVrLaserPointerOut;
     }
 
     private void SteamVrLaserPointerOut(object sender, PointerEventArgs e)
