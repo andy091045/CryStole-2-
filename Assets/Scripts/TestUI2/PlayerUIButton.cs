@@ -9,67 +9,112 @@ using Valve.VR.Extras;
 
 public class PlayerUIButton : MonoBehaviour
 {
-    private PointerEventArgs pointerEventArgs;
-    public SteamVR_LaserPointer SteamVrLaserPointer;
+    // private PointerEventArgs pointerEventArgs;
+    // public SteamVR_LaserPointer SteamVrLaserPointer;
     public UnityEvent mOnEnter = null;
     public UnityEvent mOnClick = null;
     public UnityEvent mOnUp = null;
-    void Start()
+    // void Start()
+    // {
+    //     mOnEnter.AddListener(OnButtonEnter);
+    //     mOnClick.AddListener(OnButtonClick);
+    //     mOnUp.AddListener(OnButtonUp);
+    // }
+
+    // void OnEnable()
+    // {
+    //     SteamVrLaserPointer.PointerClick += SteamVrLaserPointerClick;
+    //     SteamVrLaserPointer.PointerIn += SteamVrLaserPointerIn;
+    //     SteamVrLaserPointer.PointerOut += SteamVrLaserPointerOut;
+    // }
+
+    // void OnDestroy()
+    // {
+    //     SteamVrLaserPointer.PointerClick -= SteamVrLaserPointerClick;
+    //     SteamVrLaserPointer.PointerIn -= SteamVrLaserPointerIn;
+    //     SteamVrLaserPointer.PointerOut -= SteamVrLaserPointerOut;
+    // }
+
+    // private void SteamVrLaserPointerOut(object sender, PointerEventArgs e)
+    // {
+    //     if (e.target.gameObject == this.gameObject)
+    //     {
+    //         if (mOnUp != null) mOnUp.Invoke();
+    //     }
+    // }
+
+    // private void SteamVrLaserPointerIn(object sender, PointerEventArgs e)
+    // {
+    //     if (e.target.gameObject == this.gameObject)
+    //     {
+    //         if (mOnEnter != null) mOnEnter.Invoke();
+    //     }
+    // }
+
+    // private void SteamVrLaserPointerClick(object sender, PointerEventArgs e)
+    // {
+    //     if (e.target.gameObject == this.gameObject)
+    //     {
+    //         if (mOnClick != null) mOnClick.Invoke();
+    //     }
+    // }
+
+    // public void OnButtonClick()
+    // {
+    //     Debug.Log("OnButtonClick");
+    // }
+    // public void OnButtonEnter()
+    // {
+    //     Debug.Log("OnButtonEnter");
+    // }
+    // public void OnButtonUp()
+    // {
+    //     Debug.Log("OnButtonUp");
+    // }
+
+public SteamVR_LaserPointer laserPointer;
+
+    void Awake()
     {
-        mOnEnter.AddListener(OnButtonEnter);
-        mOnClick.AddListener(OnButtonClick);
-        mOnUp.AddListener(OnButtonUp);
+        laserPointer.PointerIn += PointerInside;
+        laserPointer.PointerOut += PointerOutside;
+        laserPointer.PointerClick += PointerClick;
     }
 
-    void OnEnable()
+    public void PointerClick(object sender, PointerEventArgs e)
     {
-        SteamVrLaserPointer.PointerClick += SteamVrLaserPointerClick;
-        SteamVrLaserPointer.PointerIn += SteamVrLaserPointerIn;
-        SteamVrLaserPointer.PointerOut += SteamVrLaserPointerOut;
-    }
-
-    void OnDestroy()
-    {
-        SteamVrLaserPointer.PointerClick -= SteamVrLaserPointerClick;
-        SteamVrLaserPointer.PointerIn -= SteamVrLaserPointerIn;
-        SteamVrLaserPointer.PointerOut -= SteamVrLaserPointerOut;
-    }
-
-    private void SteamVrLaserPointerOut(object sender, PointerEventArgs e)
-    {
-        if (e.target.gameObject == this.gameObject)
+        if (e.target.name == "Cube")
         {
-            if (mOnUp != null) mOnUp.Invoke();
+            Debug.Log("Cube was clicked");
+        } else if (e.target.name == "Button")
+        {
+            Debug.Log("Button was clicked");
+            mOnClick.Invoke();
         }
     }
 
-    private void SteamVrLaserPointerIn(object sender, PointerEventArgs e)
+    public void PointerInside(object sender, PointerEventArgs e)
     {
-        if (e.target.gameObject == this.gameObject)
+        if (e.target.name == "Cube")
         {
-            if (mOnEnter != null) mOnEnter.Invoke();
+            Debug.Log("Cube was entered");
+        }
+        else if (e.target.name == "Button")
+        {
+            Debug.Log("Button was entered");
         }
     }
 
-    private void SteamVrLaserPointerClick(object sender, PointerEventArgs e)
+    public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.gameObject == this.gameObject)
+        if (e.target.name == "Cube")
         {
-            if (mOnClick != null) mOnClick.Invoke();
+            Debug.Log("Cube was exited");
         }
-    }
-
-    public void OnButtonClick()
-    {
-        Debug.Log("OnButtonClick");
-    }
-    public void OnButtonEnter()
-    {
-        Debug.Log("OnButtonEnter");
-    }
-    public void OnButtonUp()
-    {
-        Debug.Log("OnButtonUp");
-    }
-
+        else if (e.target.name == "Button")
+        {
+            Debug.Log("Button was exited");
+        }
+    }    
+    
 }
