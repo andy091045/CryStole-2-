@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
-    path: Assets/Scenes/CryStole.unity
-    guid: 2427a510efa2c714faaf12d20e9d39f9
   - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 5a3b5eb86524ba4478e8342f32639e2f
+  - enabled: 1
+    path: Assets/Scenes/TestUI3.unity
+    guid: 1a3ead1c094f7ca48bf55bb6447f58e3
+  - enabled: 1
+    path: Assets/Scenes/CryStole.unity
+    guid: 2427a510efa2c714faaf12d20e9d39f9
   m_configObjects: {}
