@@ -17,7 +17,7 @@ public class PlayerUIButton : MonoBehaviour
     public UnityEvent IntroductionOnClick = null;
     public UnityEvent IntroductionOnEnter = null;
     public UnityEvent IntroductionOnUp = null;
-    public  Image m_Image = null;
+    public Image m_Image = null;
 
     // void Start()
     // {
@@ -77,7 +77,7 @@ public class PlayerUIButton : MonoBehaviour
     //     Debug.Log("OnButtonUp");
     // }
 
-public SteamVR_LaserPointer laserPointer;
+    public SteamVR_LaserPointer laserPointer;
 
     void Awake()
     {
@@ -89,11 +89,20 @@ public SteamVR_LaserPointer laserPointer;
     public void PointerClick(object sender, PointerEventArgs e)
     {
         if (e.target.name == "Player")
-        {           
+        {
             PlayerOnClick.Invoke();
-        } else if (e.target.name == "Introduction")
-        {            
+        }
+        else if (e.target.name == "Introduction")
+        {
             IntroductionOnClick.Invoke();
+        }
+        else if (e.target.name == "Exit")
+        {
+
+        }
+        else if (e.target.name == "Ranking")
+        {
+
         }
     }
 
@@ -105,7 +114,15 @@ public SteamVR_LaserPointer laserPointer;
         }
         else if (e.target.name == "Introduction")
         {
-           IntroductionOnEnter.Invoke();
+            IntroductionOnEnter.Invoke();
+        }
+        else if (e.target.name == "Exit")
+        {
+
+        }
+        else if (e.target.name == "Ranking")
+        {
+
         }
     }
 
@@ -113,12 +130,20 @@ public SteamVR_LaserPointer laserPointer;
     {
         if (e.target.name == "Player")
         {
-           PlayerOnUp.Invoke();
+            PlayerOnUp.Invoke();
         }
         else if (e.target.name == "Introduction")
-        {            
+        {
             IntroductionOnUp.Invoke();
         }
-    }    
-    
+        else if (e.target.name == "Exit")
+        {
+
+        }
+        else if (e.target.name == "Ranking")
+        {
+
+        }
+    }
+
 }
