@@ -11,9 +11,14 @@ public class PlayerUIButton : MonoBehaviour
 {
     // private PointerEventArgs pointerEventArgs;
     // public SteamVR_LaserPointer SteamVrLaserPointer;
-    public UnityEvent mOnEnter = null;
-    public UnityEvent mOnClick = null;
-    public UnityEvent mOnUp = null;
+    public UnityEvent PlayerOnEnter = null;
+    public UnityEvent PlayerOnClick = null;
+    public UnityEvent PlayerOnUp = null;
+    public UnityEvent IntroductionOnClick = null;
+    public UnityEvent IntroductionOnEnter = null;
+    public UnityEvent IntroductionOnUp = null;
+    public  Image m_Image = null;
+
     // void Start()
     // {
     //     mOnEnter.AddListener(OnButtonEnter);
@@ -83,37 +88,36 @@ public SteamVR_LaserPointer laserPointer;
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
-        {
-            Debug.Log("Cube was clicked");
-        } else if (e.target.name == "Button")
-        {
-            Debug.Log("Button was clicked");
-            mOnClick.Invoke();
+        if (e.target.name == "Player")
+        {           
+            PlayerOnClick.Invoke();
+        } else if (e.target.name == "Introduction")
+        {            
+            IntroductionOnClick.Invoke();
         }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
+        if (e.target.name == "Player")
         {
-            Debug.Log("Cube was entered");
+            PlayerOnEnter.Invoke();
         }
-        else if (e.target.name == "Button")
+        else if (e.target.name == "Introduction")
         {
-            Debug.Log("Button was entered");
+           IntroductionOnEnter.Invoke();
         }
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
+        if (e.target.name == "Player")
         {
-            Debug.Log("Cube was exited");
+           PlayerOnUp.Invoke();
         }
-        else if (e.target.name == "Button")
-        {
-            Debug.Log("Button was exited");
+        else if (e.target.name == "Introduction")
+        {            
+            IntroductionOnUp.Invoke();
         }
     }    
     
