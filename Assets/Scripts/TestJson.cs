@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
 using System;
 using System.IO;
 //要存储为json的对象
@@ -15,7 +14,7 @@ public class DayRangeMessage
 
 public class TestJson : MonoBehaviour
 {
-
+    public static TestJson Instance;
     string JsonPath; //json文件的路径
     DayRangeMessage dayrangeMessage;//要存起来的对象
     DayRangeMessage dayrangeMessagetemp;//要读取出来的对象
