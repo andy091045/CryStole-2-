@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CryStole.unity
     guid: 2427a510efa2c714faaf12d20e9d39f9
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: a4eaafc3ed0a14944805f11667d0eb4b
   m_configObjects: {}

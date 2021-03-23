@@ -19,10 +19,17 @@ public class TestJson : MonoBehaviour
     DayRangeMessage dayrangeMessage;//要存起来的对象
     DayRangeMessage dayrangeMessagetemp;//要读取出来的对象
 
-    void Start()
-    {
-        JsonPath = Application.streamingAssetsPath + "/JsonTest.json";
+
+void Awake()
+{
+     JsonPath = Application.streamingAssetsPath + "/JsonTest.json";
         InitJsonData();
+    Instance=this;
+}
+    void Start()
+     {
+    //     JsonPath = Application.streamingAssetsPath + "/JsonTest.json";
+    //     InitJsonData();
     }
     //json 数据初始化
     void InitJsonData()
@@ -74,5 +81,4 @@ public class TestJson : MonoBehaviour
 
 
     }
-
 }
