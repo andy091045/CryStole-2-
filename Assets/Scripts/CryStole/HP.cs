@@ -8,7 +8,7 @@ public class HP : MonoBehaviour
 {
     public bool deadappear = false;
     public static HP Instance;
-    int hpCount = 50;
+    public int hpCount = 50;
     public GameObject HP_UI;
     public Text PowerNumber;
     private void Awake()
@@ -45,7 +45,7 @@ public class HP : MonoBehaviour
         {
             if (deadappear)
             {
-                CheckUserInput.Instance.cannotPaused=true;
+                CheckUserInput.Instance.cannotPaused = true;
                 CheckUserInput.Instance.LoseGame();
             }
             hpCount = 0;
