@@ -12,12 +12,12 @@ public class EndScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ScoreNumber.text = TestJson.Instance.dayrangeMessagetemp.Score + " ";
+        ScoreNumber.text = TestJson.Instance.score + " ";
     }
 
     // Update is called once per frame
     void Update()
     {
-
+ScoreNumber.text = TestJson.Instance.score + " ";
     }
 }

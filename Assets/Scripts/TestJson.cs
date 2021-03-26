@@ -18,7 +18,8 @@ public class TestJson : MonoBehaviour
     public static TestJson Instance;
     string JsonPath; //json文件的路径
     DayRangeMessage dayrangeMessage;//要存起来的对象
-    public DayRangeMessage dayrangeMessagetemp;//要读取出来的对象
+    DayRangeMessage dayrangeMessagetemp;//要读取出来的对象
+    public int score;
 
 
     void Awake()
@@ -26,6 +27,7 @@ public class TestJson : MonoBehaviour
         JsonPath = Application.streamingAssetsPath + "/JsonTest.json";
         InitJsonData();
         Instance = this;
+        Debug.Log(123);
     }
     void Start()
     {
@@ -46,6 +48,14 @@ public class TestJson : MonoBehaviour
         // dayrangeMessage.rangelist.Add(10);
         // dayrangeMessage.rangelist.Add(22);
         // dayrangeMessage.rangelist.Add(33);
+    }
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
+    {
+        //  dayrangeMessage.Score = HP.Instance.hpCount;
+        //   Debug.Log("hpCount:"+ dayrangeMessage.Score);
     }
     //把上面初始化的数据进行保存
     public void SaveJson()
@@ -70,9 +80,10 @@ public class TestJson : MonoBehaviour
             Debug.LogError("读取的文件不存在！");
             return;
         }
+        Debug.Log("readjson跑了");
         string json = File.ReadAllText(JsonPath);
         dayrangeMessagetemp = JsonUtility.FromJson<DayRangeMessage>(json);
-        int score = dayrangeMessagetemp.Score;
+        score = dayrangeMessagetemp.Score;
         Debug.LogError(score);
         //读取第一个属性:日期
         // string date = dayrangeMessagetemp.date_time;

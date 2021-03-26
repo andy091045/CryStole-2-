@@ -28,10 +28,12 @@ public class HP : MonoBehaviour
             case 1:
                 //打到方塊加2分            
                 hpCount += 2;
+                // Debug.Log("hpCount:"+hpCount);
                 break;
             case 2:
                 //沒打到方塊扣20分
                 hpCount -= 20;
+                // Debug.Log("hpCount:"+hpCount);
                 break;
             case 3:
                 //撞到障礙物扣30分

@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
                 HP.Instance.CountHP(1);
                 ShockController.Instance.Shock(0.3f, 2);
                 // audiosource.PlayOneShot(impact);
-                Debug.Log("123456789");
+                // Debug.Log("123456789");
                 Destroy();
             }
             if (other.gameObject.CompareTag("Wall"))
