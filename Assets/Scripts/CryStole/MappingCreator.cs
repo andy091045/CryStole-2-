@@ -14,8 +14,13 @@ public class MappingCreator : MonoBehaviour
     public Transform[] points2;
     Vector3 position = Vector3.zero;
     public TextAsset mapping;
+
+    public float time1 = 0; // 倒數計時數
+    public float time2 = 5; // 間隔時間
+
     Music2 data;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         //之後要做
@@ -139,6 +144,23 @@ public class MappingCreator : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
+        if (timer >= time2)
+        {
+            time1 += timer; //累計總時間
+            Debug.Log(time1);
+            DestroyEnemy(timer);
+            CreateEnemy(timer);
+            timer = 0;
+        }
+    }
+    void CreateEnemy(float timer)
+    {
+
+    }
+
+    void DestroyEnemy(float timer)
+    {
+
     }
 }
 
