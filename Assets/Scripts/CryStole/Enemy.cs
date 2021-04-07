@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Lean.Pool;
 
 public class Enemy : MonoBehaviour
 {
@@ -12,19 +13,6 @@ public class Enemy : MonoBehaviour
     public ParticleSystem deathParticles;
     public EnemyType enemyType;
     float timer = 0;
-    // private void Start()
-    // {
-    //     for (int i = 0; i < MostRenderNumbers; i++)
-    //     {
-    //         render[i].enabled = false;
-    //     }
-    // }
-    // private void Update()
-    // {
-    //     timer = timer + Time.deltaTime;
-
-    // }
-
     void Start()
     {
         audiosource = GetComponent<AudioSource>();
@@ -44,7 +32,7 @@ public class Enemy : MonoBehaviour
             {
                 HP.Instance.CountHP(2);
                 GetHurt.Instance.HurtStarting = true;
-                Destroy(gameObject);
+                Lean.Pool.LeanPool.Despawn(gameObject);
             }
         }
 
@@ -61,7 +49,7 @@ public class Enemy : MonoBehaviour
             {
                 HP.Instance.CountHP(2);
                 GetHurt.Instance.HurtStarting = true;
-                Destroy(gameObject);
+                Lean.Pool.LeanPool.Despawn(gameObject);
             }
         }
 
@@ -79,7 +67,7 @@ public class Enemy : MonoBehaviour
             {
                 HP.Instance.CountHP(2);
                 GetHurt.Instance.HurtStarting = true;
-                Destroy(gameObject);
+                Lean.Pool.LeanPool.Despawn(gameObject);
             }
         }
 
@@ -96,7 +84,7 @@ public class Enemy : MonoBehaviour
             {
                 HP.Instance.CountHP(2);
                 GetHurt.Instance.HurtStarting = true;
-                Destroy(gameObject);
+                Lean.Pool.LeanPool.Despawn(gameObject);
             }
         }
     }
@@ -104,7 +92,7 @@ public class Enemy : MonoBehaviour
     public void Destroy()
     {
         Instantiate(deathParticles, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Lean.Pool.LeanPool.Despawn(gameObject);
     }
     public enum EnemyType
     {
