@@ -12,11 +12,8 @@ public class EndData : MonoBehaviour
     void Start()
     {
         fade.Invoke();
-        StartCoroutine(Example());
-        access.Invoke();
-            
-          
-            
+        // StartCoroutine(Example());
+        access.Invoke();            
     }
      IEnumerator Example()
     {

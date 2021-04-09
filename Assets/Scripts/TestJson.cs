@@ -13,11 +13,6 @@ public class DayRangeMessage
     // public List<int> rangelist; //一天之内每次运行程序生成的随机数列表
 }
 
-public class MappingMessage
-{
-
-}
-
 public class TestJson : MonoBehaviour
 {
     public static TestJson Instance;
@@ -25,12 +20,11 @@ public class TestJson : MonoBehaviour
     string MappingJsonPath; //譜面生成路徑 
     DayRangeMessage dayrangeMessage;//要存起来的对象
     DayRangeMessage dayrangeMessagetemp;//要读取出来的对象
-    MappingMessage mappingMessagetemp; //要讀取出來的譜面
+
     public int score;
     void Awake()
     {
-        JsonPath = Application.streamingAssetsPath + "/JsonTest.json";
-        MappingJsonPath = Application.streamingAssetsPath + "/MusicTest2.json";
+        JsonPath = Application.streamingAssetsPath + "/JsonTest.json";      
         InitJsonData();
         Instance = this;
     }
@@ -44,9 +38,7 @@ public class TestJson : MonoBehaviour
     {
         //生成一个DayRangeMessage对象
         dayrangeMessage = new DayRangeMessage();
-        dayrangeMessage.Score = 0;
-        //生成一個MappingMessage對象
-        mappingMessagetemp = new MappingMessage();
+        dayrangeMessage.Score = 0;    
         //给DayRangeMessage对象的第一个属性date_time赋值
         // dayrangeMessage.date_time = "2019年8月14号";
         //给DayRangeMessage对象的第二个属性rangelist赋值
@@ -77,21 +69,14 @@ public class TestJson : MonoBehaviour
     //从本地读取json数据
     public void ReadJson()
     {
-        if (!File.Exists(JsonPath))
-        {
-            Debug.LogError("读取的文件不存在！");
-            return;
-        }
-        if (!File.Exists(MappingJsonPath))
-        {
-            Debug.LogError("讀取的 MappingJsonPath 文件不存在！");
-            return;
-        }
         Debug.Log("readjson run!");
-        string json = File.ReadAllText(JsonPath);
-        string mappingjson = File.ReadAllText(MappingJsonPath);
-        dayrangeMessagetemp = JsonUtility.FromJson<DayRangeMessage>(json);
-        mappingMessagetemp = JsonUtility.FromJson<MappingMessage>(mappingjson);
+        // if (!File.Exists(JsonPath))
+        // {
+        //     Debug.LogError("读取的文件不存在！");
+        //     return;
+        // }                
+        string json = File.ReadAllText(JsonPath);        
+        dayrangeMessagetemp = JsonUtility.FromJson<DayRangeMessage>(json);       
         score = dayrangeMessagetemp.Score;
         Debug.LogError("score: " + score);
         //读取第一个属性:日期
