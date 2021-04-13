@@ -13,6 +13,11 @@ public class Enemy : MonoBehaviour
     public ParticleSystem deathParticles;
     public EnemyType enemyType;
     float timer = 0;
+
+    int id;
+    float time; //個別敵人該被打到的時間
+
+    public float rangetime = 0.5f; //判定時間範圍
     void Start()
     {
         audiosource = GetComponent<AudioSource>();
@@ -23,10 +28,18 @@ public class Enemy : MonoBehaviour
         {
             if (other.gameObject.CompareTag("BlueWeapon"))
             {
-                HP.Instance.CountHP(1);
-                ShockController.Instance.Shock(0.3f, 1);
-                // audiosource.PlayOneShot(impact);
-                Destroy();
+                if (timer >= time - rangetime && timer <= time + rangetime)
+                {
+                    Debug.Log("成功打到");
+                    HP.Instance.CountHP(1);
+                    ShockController.Instance.Shock(0.3f, 1);
+                    // audiosource.PlayOneShot(impact);
+                    Destroy();
+                }
+                else
+                {
+                    Debug.Log("miss");
+                }
             }
             if (other.gameObject.CompareTag("Wall"))
             {
@@ -40,10 +53,17 @@ public class Enemy : MonoBehaviour
         {
             if (other.gameObject.CompareTag("PurpleWeapon"))
             {
-                HP.Instance.CountHP(1);
-                ShockController.Instance.Shock(0.3f, 1);
-                // audiosource.PlayOneShot(impact);
-                Destroy();
+                if (timer >= time - rangetime && timer <= time + rangetime)
+                {
+                    HP.Instance.CountHP(1);
+                    ShockController.Instance.Shock(0.3f, 1);
+                    // audiosource.PlayOneShot(impact);
+                    Destroy();
+                }
+                else
+                {
+                    Debug.Log("miss");
+                }
             }
             if (other.gameObject.CompareTag("Wall"))
             {
@@ -57,11 +77,17 @@ public class Enemy : MonoBehaviour
         {
             if (other.gameObject.CompareTag("RedWeapon"))
             {
-                HP.Instance.CountHP(1);
-                ShockController.Instance.Shock(0.3f, 2);
-                // audiosource.PlayOneShot(impact);
-                // Debug.Log("123456789");
-                Destroy();
+                if (timer >= time - rangetime && timer <= time + rangetime)
+                {
+                    HP.Instance.CountHP(1);
+                    ShockController.Instance.Shock(0.3f, 1);
+                    // audiosource.PlayOneShot(impact);
+                    Destroy();
+                }
+                else
+                {
+                    Debug.Log("miss");
+                }
             }
             if (other.gameObject.CompareTag("Wall"))
             {
@@ -75,10 +101,17 @@ public class Enemy : MonoBehaviour
         {
             if (other.gameObject.CompareTag("YellowWeapon"))
             {
-                HP.Instance.CountHP(1);
-                ShockController.Instance.Shock(0.3f, 2);
-                // audiosource.PlayOneShot(impact);
-                Destroy();
+                if (timer >= time - rangetime && timer <= time + rangetime)
+                {
+                    HP.Instance.CountHP(1);
+                    ShockController.Instance.Shock(0.3f, 1);
+                    // audiosource.PlayOneShot(impact);
+                    Destroy();
+                }
+                else
+                {
+                    Debug.Log("miss");
+                }
             }
             if (other.gameObject.CompareTag("Wall"))
             {
@@ -88,6 +121,18 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+    private void Update()
+    {
+        timer += Time.deltaTime;
+    }
+
+    public void Init(int id, float time)
+    {
+        this.id = id;
+        this.time = time;
+        // Debug.Log("第" + id + "個敵人出現");
+    }
+
 
     public void Destroy()
     {
