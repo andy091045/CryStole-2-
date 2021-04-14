@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
         {
             if (other.gameObject.CompareTag("BlueWeapon"))
             {
-                if (timer >= time - rangetime && timer <= time + rangetime)
+                if (RightWeapon.Instance.timer >= time - rangetime && RightWeapon.Instance.timer <= time + rangetime)
                 {
                     Debug.Log("成功打到");
                     HP.Instance.CountHP(1);
@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
         {
             if (other.gameObject.CompareTag("PurpleWeapon"))
             {
-                if (timer >= time - rangetime && timer <= time + rangetime)
+                if (RightWeapon.Instance.timer >= time - rangetime && RightWeapon.Instance.timer <= time + rangetime)
                 {
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 1);
@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
         {
             if (other.gameObject.CompareTag("RedWeapon"))
             {
-                if (timer >= time - rangetime && timer <= time + rangetime)
+                if (LeftWeapon.Instance.timer >= time - rangetime && LeftWeapon.Instance.timer <= time + rangetime)
                 {
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 1);
@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour
         {
             if (other.gameObject.CompareTag("YellowWeapon"))
             {
-                if (timer >= time - rangetime && timer <= time + rangetime)
+                if (LeftWeapon.Instance.timer >= time - rangetime && LeftWeapon.Instance.timer <= time + rangetime)
                 {
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 1);

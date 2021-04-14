@@ -16,7 +16,7 @@ public class RightWeapon : MonoBehaviour
     public GameObject changeSword;
     public GameObject PausePointer;
     int ChangeCount = 0;
-    float timer = 0;
+    public float timer = -5;
     bool switchWeapon = true; //true左手為紅色右手藍色，false左手為黃色右手為紫色
     bool InPause = false;
     public AudioClip impact;
@@ -87,7 +87,7 @@ public class RightWeapon : MonoBehaviour
                 // {
                 //     SwordHead.SetActive(true);
                 // }
-                
+
                 switchWeapon = !switchWeapon;
                 Sword.SetActive(false);
                 NextSword.SetActive(true);
@@ -118,33 +118,7 @@ public class RightWeapon : MonoBehaviour
     }
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.A))
-        // {
-        //     Sword.SetActive(false);
-        //     NextSword.SetActive(true);
-        //     changeSword = Sword;
-        //     Sword = NextSword;
-        //     NextSword = changeSword;
-        //     audiosource.PlayOneShot(impact);
-        // }
-        // RaycastHit hit;
-        // if (Physics.Raycast(transform.position, transform.forward, out hit, 1, layer))
-        // {
-        //     if (Vector3.Angle(transform.position - previousPos, hit.transform.up) > 0)
-        //     {
-        //         audiosource.PlayOneShot(impact);
-        //         Debug.Log("music");
-        //         Lean.Pool.LeanPool.Despawn(hit.transform.gameObject);
-        //         // andy.distroyCube();
-        //         // amy.distroyCube();
-        //     }
-        // }
-        // previousPos = transform.position;    
-        //         timer = timer + Time.deltaTime;
-        // if(timer>=2f){
-        //      ChangePosition();             
-        //     timer=0f;           
-        // }    
+        timer += Time.deltaTime;
     }
     public void ChangePosition()
     {
