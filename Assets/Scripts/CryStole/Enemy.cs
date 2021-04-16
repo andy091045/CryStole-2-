@@ -100,7 +100,7 @@ public class Enemy : MonoBehaviour
                 else if ((LeftWeapon.Instance.timer >= time - 2 * rangetime && LeftWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
                 {
                     HP.Instance.CountHP(2);
-                    ShockController.Instance.Shock(0.1f, 1);
+                    ShockController.Instance.Shock(0.1f, 2);
                     // audiosource.PlayOneShot(impact);
                     Destroy();
                 }
@@ -131,7 +131,7 @@ public class Enemy : MonoBehaviour
                 else if ((LeftWeapon.Instance.timer >= time - 2 * rangetime && LeftWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
                 {
                     HP.Instance.CountHP(2);
-                    ShockController.Instance.Shock(0.1f, 1);
+                    ShockController.Instance.Shock(0.1f, 2);
                     // audiosource.PlayOneShot(impact);
                     Destroy();
                 }
