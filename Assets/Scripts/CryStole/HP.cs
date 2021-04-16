@@ -6,6 +6,7 @@ using TMPro;
 
 public class HP : MonoBehaviour
 {
+    public int combo = 0;
     public bool deadappear = false;
     public static HP Instance;
     public int hpCount = 50;
@@ -26,16 +27,26 @@ public class HP : MonoBehaviour
         switch (n)
         {
             case 1:
-                //打到方塊加2分            
-                hpCount += 2;
+
+                combo += 1;
+                Debug.Log("Perfect!!!  combo:" + combo);
+                hpCount += 2; //打到方塊加2分 
                 // Debug.Log("hpCount:"+hpCount);
                 break;
             case 2:
-                //沒打到方塊扣20分
-                hpCount -= 20;
+
+                combo += 1;
+                Debug.Log("Good!!!  combo:" + combo);
+                hpCount += 2; //打到方塊加2分 
                 // Debug.Log("hpCount:"+hpCount);
                 break;
             case 3:
+                combo = 0;
+                Debug.Log("combo:" + combo + "combo歸零");
+                hpCount -= 20; //沒打到方塊扣20分
+                // Debug.Log("hpCount:"+hpCount);
+                break;
+            case 4:
                 //撞到障礙物扣30分
                 hpCount -= 50;
                 break;

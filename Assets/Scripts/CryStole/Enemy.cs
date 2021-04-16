@@ -30,9 +30,15 @@ public class Enemy : MonoBehaviour
             {
                 if (RightWeapon.Instance.timer >= time - rangetime && RightWeapon.Instance.timer <= time + rangetime)
                 {
-                    Debug.Log("成功打到");
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 1);
+                    // audiosource.PlayOneShot(impact);
+                    Destroy();
+                }
+                else if ((RightWeapon.Instance.timer >= time - 2 * rangetime && RightWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
+                {
+                    HP.Instance.CountHP(2);
+                    ShockController.Instance.Shock(0.1f, 1);
                     // audiosource.PlayOneShot(impact);
                     Destroy();
                 }
@@ -43,7 +49,7 @@ public class Enemy : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Wall"))
             {
-                HP.Instance.CountHP(2);
+                HP.Instance.CountHP(3);
                 GetHurt.Instance.HurtStarting = true;
                 Lean.Pool.LeanPool.Despawn(gameObject);
             }
@@ -60,6 +66,13 @@ public class Enemy : MonoBehaviour
                     // audiosource.PlayOneShot(impact);
                     Destroy();
                 }
+                else if ((RightWeapon.Instance.timer >= time - 2 * rangetime && RightWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
+                {
+                    HP.Instance.CountHP(2);
+                    ShockController.Instance.Shock(0.1f, 1);
+                    // audiosource.PlayOneShot(impact);
+                    Destroy();
+                }
                 else
                 {
                     Debug.Log("miss");
@@ -67,7 +80,7 @@ public class Enemy : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Wall"))
             {
-                HP.Instance.CountHP(2);
+                HP.Instance.CountHP(3);
                 GetHurt.Instance.HurtStarting = true;
                 Lean.Pool.LeanPool.Despawn(gameObject);
             }
@@ -84,6 +97,13 @@ public class Enemy : MonoBehaviour
                     // audiosource.PlayOneShot(impact);
                     Destroy();
                 }
+                else if ((LeftWeapon.Instance.timer >= time - 2 * rangetime && LeftWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
+                {
+                    HP.Instance.CountHP(2);
+                    ShockController.Instance.Shock(0.1f, 1);
+                    // audiosource.PlayOneShot(impact);
+                    Destroy();
+                }
                 else
                 {
                     Debug.Log("miss");
@@ -91,7 +111,7 @@ public class Enemy : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Wall"))
             {
-                HP.Instance.CountHP(2);
+                HP.Instance.CountHP(3);
                 GetHurt.Instance.HurtStarting = true;
                 Lean.Pool.LeanPool.Despawn(gameObject);
             }
@@ -108,6 +128,13 @@ public class Enemy : MonoBehaviour
                     // audiosource.PlayOneShot(impact);
                     Destroy();
                 }
+                else if ((LeftWeapon.Instance.timer >= time - 2 * rangetime && LeftWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
+                {
+                    HP.Instance.CountHP(2);
+                    ShockController.Instance.Shock(0.1f, 1);
+                    // audiosource.PlayOneShot(impact);
+                    Destroy();
+                }
                 else
                 {
                     Debug.Log("miss");
@@ -115,7 +142,7 @@ public class Enemy : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Wall"))
             {
-                HP.Instance.CountHP(2);
+                HP.Instance.CountHP(3);
                 GetHurt.Instance.HurtStarting = true;
                 Lean.Pool.LeanPool.Despawn(gameObject);
             }
