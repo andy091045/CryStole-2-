@@ -83,7 +83,7 @@ TextMesh:
   m_GameObject: {fileID: 821755162337603148}
   m_Text: 123
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 20
   m_LineSpacing: 1
   m_Anchor: 1
   m_Alignment: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTime: 3
+  Offset: {x: 0, y: 2, z: 0}
 --- !u!95 &5756499651410832781
 Animator:
   serializedVersion: 3
