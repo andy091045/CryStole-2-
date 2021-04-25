@@ -26,7 +26,6 @@ public class SwitchSceneData : MonoBehaviour
     /// <param name="other">The other Collider involved in this collision.</param>
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("123");
         if (other.gameObject.CompareTag("Player"))
         {
             access.Invoke();

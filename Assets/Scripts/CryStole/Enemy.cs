@@ -5,6 +5,7 @@ using Lean.Pool;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject FloatingTextPrefab;
     public AudioClip impact;
     AudioSource audiosource;
     public Renderer[] render;
@@ -30,6 +31,10 @@ public class Enemy : MonoBehaviour
             {
                 if (RightWeapon.Instance.timer >= time - rangetime && RightWeapon.Instance.timer <= time + rangetime)
                 {
+                    if (FloatingTextPrefab)
+                    {
+                        ShowFloatingText("PERFECT");
+                    }
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 1);
                     // audiosource.PlayOneShot(impact);
@@ -37,6 +42,10 @@ public class Enemy : MonoBehaviour
                 }
                 else if ((RightWeapon.Instance.timer >= time - 2 * rangetime && RightWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
                 {
+                    if (FloatingTextPrefab)
+                    {
+                        ShowFloatingText("GOOD");
+                    }
                     HP.Instance.CountHP(2);
                     ShockController.Instance.Shock(0.1f, 1);
                     // audiosource.PlayOneShot(impact);
@@ -44,6 +53,10 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
+                    if (FloatingTextPrefab)
+                    {
+                        ShowFloatingText("BAD");
+                    }
                     Debug.Log("miss");
                 }
             }
@@ -160,6 +173,11 @@ public class Enemy : MonoBehaviour
         // Debug.Log("第" + id + "個敵人出現");
     }
 
+    void ShowFloatingText(string status)
+    {
+        var go = LeanPool.Spawn(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMesh>().text = status.ToString();
+    }
 
     public void Destroy()
     {

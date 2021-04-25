@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b35f57fe15d7342857a36e6f75d823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloatingTextPrefab: {fileID: 821755162337603148, guid: a17d4788da561054ba21105c01337a62,
+    type: 3}
   impact: {fileID: 8300000, guid: 46b8edf7979247f4689362010d7fac09, type: 3}
   render:
   - {fileID: 3571409717683704706}
