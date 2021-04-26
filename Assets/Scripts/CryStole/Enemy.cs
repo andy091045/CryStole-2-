@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
             {
                 if (RightWeapon.Instance.timer >= time - rangetime && RightWeapon.Instance.timer <= time + rangetime)
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("PERFECT");
                     }
@@ -85,7 +85,7 @@ public class Enemy : MonoBehaviour
                 }
                 else if ((RightWeapon.Instance.timer >= time - 2 * rangetime && RightWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("GOOD");
                     }
@@ -96,7 +96,7 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("BAD");
                     }
@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour
             {
                 if (LeftWeapon.Instance.timer >= time - rangetime && LeftWeapon.Instance.timer <= time + rangetime)
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("PERFECT");
                     }
@@ -128,7 +128,7 @@ public class Enemy : MonoBehaviour
                 }
                 else if ((LeftWeapon.Instance.timer >= time - 2 * rangetime && LeftWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("GOOD");
                     }
@@ -139,7 +139,7 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("BAD");
                     }
@@ -160,7 +160,7 @@ public class Enemy : MonoBehaviour
             {
                 if (LeftWeapon.Instance.timer >= time - rangetime && LeftWeapon.Instance.timer <= time + rangetime)
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("PERFECT");
                     }
@@ -171,7 +171,7 @@ public class Enemy : MonoBehaviour
                 }
                 else if ((LeftWeapon.Instance.timer >= time - 2 * rangetime && LeftWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("GOOD");
                     }
@@ -182,7 +182,7 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
-                     if (FloatingTextPrefab)
+                    if (FloatingTextPrefab)
                     {
                         ShowFloatingText("BAD");
                     }
@@ -210,7 +210,7 @@ public class Enemy : MonoBehaviour
     }
 
     void ShowFloatingText(string status)
-    {       
+    {
         var go = LeanPool.Spawn(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
         go.GetComponent<TextMesh>().text = status.ToString();
     }
