@@ -211,8 +211,8 @@ public class Enemy : MonoBehaviour
 
     void ShowFloatingText(string status)
     {
-        var go = LeanPool.Spawn(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TextMesh>().text = status.ToString();
+        // var go = LeanPool.Spawn(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        // go.GetComponent<TextMesh>().text = status.ToString();
     }
 
     public void Destroy()
