@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public int MostRenderNumbers;
     bool hide = true;
     public ParticleSystem deathParticles;
+    public ParticleSystem PerfectParticles;
     public EnemyType enemyType;
     float timer = 0;
 
@@ -217,6 +218,7 @@ public class Enemy : MonoBehaviour
 
     public void Destroy()
     {
+        Instantiate(PerfectParticles, transform.position, Quaternion.identity);
         Instantiate(deathParticles, transform.position, Quaternion.identity);
         Lean.Pool.LeanPool.Despawn(gameObject);
     }

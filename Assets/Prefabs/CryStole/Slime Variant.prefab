@@ -167,6 +167,8 @@ MonoBehaviour:
   MostRenderNumbers: 5
   deathParticles: {fileID: 6252061217285380832, guid: dfd86f369a7f74349ba71a7644a5e82d,
     type: 3}
+  PerfectParticles: {fileID: 8585097118650312260, guid: ca3d9fbc7059bec4ebdda7aea14f56ac,
+    type: 3}
   enemyType: 2
   rangetime: 1
 --- !u!1001 &3113865477719941349

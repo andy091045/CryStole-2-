@@ -15,8 +15,8 @@ public class MappingCreator : MonoBehaviour
     Vector3 position = Vector3.zero;
     public TextAsset mapping;
 
-    public float time1 = 0; // 累計時間
-    public float time2 = 20; // 間隔時間
+    public float time1 = 10; // 累計時間
+    public float time2; // 間隔時間
 
     public int InitEnemyNum = 20;
 
