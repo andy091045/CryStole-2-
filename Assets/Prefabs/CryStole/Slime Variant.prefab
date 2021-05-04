@@ -166,7 +166,7 @@ MonoBehaviour:
   deathParticles: {fileID: 6252061217285380832, guid: dfd86f369a7f74349ba71a7644a5e82d,
     type: 3}
   enemyType: 2
-  rangetime: 1
+  rangetime: 10
 --- !u!1001 &3113865477719941349
 PrefabInstance:
   m_ObjectHideFlags: 0
