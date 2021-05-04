@@ -170,7 +170,7 @@ MonoBehaviour:
   PerfectParticles: {fileID: 8585097118650312260, guid: ca3d9fbc7059bec4ebdda7aea14f56ac,
     type: 3}
   enemyType: 2
-  rangetime: 1
+  rangetime: 5
 --- !u!1001 &3113865477719941349
 PrefabInstance:
   m_ObjectHideFlags: 0
