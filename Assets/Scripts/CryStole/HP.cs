@@ -29,20 +29,20 @@ public class HP : MonoBehaviour
             case 1:
 
                 combo += 1;
-                Debug.Log("Perfect!!!  combo:" + combo);
+                // Debug.Log("Perfect!!!  combo:" + combo);
                 hpCount += 2; //打到方塊加2分 
                 // Debug.Log("hpCount:"+hpCount);
                 break;
             case 2:
 
                 combo += 1;
-                Debug.Log("Good!!!  combo:" + combo);
+                // Debug.Log("Good!!!  combo:" + combo);
                 hpCount += 2; //打到方塊加2分 
                 // Debug.Log("hpCount:"+hpCount);
                 break;
             case 3:
                 combo = 0;
-                Debug.Log("combo:" + combo + "combo歸零");
+                // Debug.Log("combo:" + combo + "combo歸零");
                 hpCount -= 20; //沒打到方塊扣20分
                 // Debug.Log("hpCount:"+hpCount);
                 break;

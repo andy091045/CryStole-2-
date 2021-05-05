@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
                 else
                 {
                     Debug.Log("miss");
+                    Debug.Log("第"+id+"個該被打到的時間: "+time+"現在時間: " + RightWeapon.Instance.timer);
                 }
             }
             if (other.gameObject.CompareTag("Wall"))
@@ -76,6 +77,7 @@ public class Enemy : MonoBehaviour
                 else
                 {
                     Debug.Log("miss");
+                    Debug.Log("第"+id+"個該被打到的時間: "+time+"現在時間: " + RightWeapon.Instance.timer);
                 }
             }
             if (other.gameObject.CompareTag("Wall"))
@@ -107,6 +109,7 @@ public class Enemy : MonoBehaviour
                 else
                 {
                     Debug.Log("miss");
+                    Debug.Log("第"+id+"個該被打到的時間: "+time+"現在時間: " + LeftWeapon.Instance.timer);
                 }
             }
             if (other.gameObject.CompareTag("Wall"))
@@ -138,6 +141,7 @@ public class Enemy : MonoBehaviour
                 else
                 {
                     Debug.Log("miss");
+                    Debug.Log("第"+id+"個該被打到的時間: "+time+"現在時間: " + LeftWeapon.Instance.timer);
                 }
             }
             if (other.gameObject.CompareTag("Wall"))
@@ -156,7 +160,7 @@ public class Enemy : MonoBehaviour
     public void Init(int id, float time)
     {
         this.id = id;
-        this.time = time;
+        this.time = time;        
         // Debug.Log("第" + id + "個敵人出現");
     }
 
