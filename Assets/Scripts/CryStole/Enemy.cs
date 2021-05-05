@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
                     }
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 1);
+                    Debug.Log("PERFECT" + "該被打到時間:" + time + "實際打到時間: " +  RightWeapon.Instance.timer );
                     // audiosource.PlayOneShot(impact);
                     Destroy();
                 }
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour
                     HP.Instance.CountHP(2);
                     ShockController.Instance.Shock(0.1f, 1);
                     // audiosource.PlayOneShot(impact);
+                    Debug.Log("GOOD" + "該被打到時間:" + time + "實際打到時間: " +  RightWeapon.Instance.timer );
                     Destroy();
                 }
                 else
@@ -57,8 +59,8 @@ public class Enemy : MonoBehaviour
                     if (FloatingTextPrefab)
                     {
                         ShowFloatingText("BAD");
-                    }
-                    Debug.Log("miss");
+                    }                    
+                    Debug.Log("miss" + "該被打到時間:" + time + "實際打到時間: " +  RightWeapon.Instance.timer );
                 }
             }
             if (other.gameObject.CompareTag("Wall"))
@@ -82,6 +84,7 @@ public class Enemy : MonoBehaviour
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 1);
                     // audiosource.PlayOneShot(impact);
+                    Debug.Log("PERFECT" + "該被打到時間:" + time + "實際打到時間: " +  RightWeapon.Instance.timer );
                     Destroy();
                 }
                 else if ((RightWeapon.Instance.timer >= time - 2 * rangetime && RightWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
@@ -93,6 +96,7 @@ public class Enemy : MonoBehaviour
                     HP.Instance.CountHP(2);
                     ShockController.Instance.Shock(0.1f, 1);
                     // audiosource.PlayOneShot(impact);
+                    Debug.Log("GOOD" + "該被打到時間:" + time + "實際打到時間: " +  RightWeapon.Instance.timer );
                     Destroy();
                 }
                 else
@@ -101,7 +105,7 @@ public class Enemy : MonoBehaviour
                     {
                         ShowFloatingText("BAD");
                     }
-                    Debug.Log("miss");
+                     Debug.Log("miss" + "該被打到時間:" + time + "實際打到時間: " +  RightWeapon.Instance.timer );
                 }
             }
             if (other.gameObject.CompareTag("Wall"))
@@ -125,6 +129,7 @@ public class Enemy : MonoBehaviour
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 2);
                     // audiosource.PlayOneShot(impact);
+                    Debug.Log("PERFECT" + "該被打到時間:" + time + "實際打到時間: " +  LeftWeapon.Instance.timer );
                     Destroy();
                 }
                 else if ((LeftWeapon.Instance.timer >= time - 2 * rangetime && LeftWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
@@ -136,6 +141,7 @@ public class Enemy : MonoBehaviour
                     HP.Instance.CountHP(2);
                     ShockController.Instance.Shock(0.1f, 2);
                     // audiosource.PlayOneShot(impact);
+                    Debug.Log("GOOD" + "該被打到時間:" + time + "實際打到時間: " +  LeftWeapon.Instance.timer );
                     Destroy();
                 }
                 else
@@ -144,7 +150,7 @@ public class Enemy : MonoBehaviour
                     {
                         ShowFloatingText("BAD");
                     }
-                    Debug.Log("miss");
+                    Debug.Log("MISS" + "該被打到時間:" + time + "實際打到時間: " +  LeftWeapon.Instance.timer );
                 }
             }
             if (other.gameObject.CompareTag("Wall"))
@@ -168,6 +174,7 @@ public class Enemy : MonoBehaviour
                     HP.Instance.CountHP(1);
                     ShockController.Instance.Shock(0.3f, 2);
                     // audiosource.PlayOneShot(impact);
+                    Debug.Log("PERFECT" + "該被打到時間:" + time + "實際打到時間: " +  LeftWeapon.Instance.timer );
                     Destroy();
                 }
                 else if ((LeftWeapon.Instance.timer >= time - 2 * rangetime && LeftWeapon.Instance.timer < time - rangetime) || (RightWeapon.Instance.timer > time - rangetime && RightWeapon.Instance.timer <= time - 2 * rangetime))
@@ -179,6 +186,7 @@ public class Enemy : MonoBehaviour
                     HP.Instance.CountHP(2);
                     ShockController.Instance.Shock(0.1f, 2);
                     // audiosource.PlayOneShot(impact);
+                    Debug.Log("GOOD" + "該被打到時間:" + time + "實際打到時間: " +  LeftWeapon.Instance.timer );
                     Destroy();
                 }
                 else
@@ -187,7 +195,7 @@ public class Enemy : MonoBehaviour
                     {
                         ShowFloatingText("BAD");
                     }
-                    Debug.Log("miss");
+                    Debug.Log("MISS" + "PERFECT" + "該被打到時間:" + time + "實際打到時間: " +  LeftWeapon.Instance.timer );
                 }
             }
             if (other.gameObject.CompareTag("Wall"))

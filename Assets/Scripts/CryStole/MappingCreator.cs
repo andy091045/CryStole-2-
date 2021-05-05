@@ -22,6 +22,8 @@ public class MappingCreator : MonoBehaviour
 
     public int i, j;
 
+    public float TIME_NUMBER; //方塊時間間隔 
+
     Music2 data;
 
 
@@ -103,13 +105,13 @@ public class MappingCreator : MonoBehaviour
         if (timer >= time2)
         {
             time1 += timer; //累計總時間                   
-            CreateEnemy(timer, time1, time2);
+            CreateEnemy(time1, time2);
             timer = 0;
         }
     }
-    void CreateEnemy(float timer, float time1, float time2)
+    void CreateEnemy(float time1, float time2)
     {
-        while (time1 > data._notes[i]._time * 0.46f - time2)
+        while (time1 > data._notes[i]._time * TIME_NUMBER - time2)
         {
             // if (i <= 113)
             // {
@@ -129,9 +131,9 @@ public class MappingCreator : MonoBehaviour
         if (data._notes[i]._cutDirection == 0)
         {
             GameObject cube = LeanPool.Spawn(cubes[0], points[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
-            cube.GetComponent<Enemy>().Init(id: i, time: data._notes[i]._time * 0.46153846f);
+            cube.GetComponent<Enemy>().Init(id: i, time: data._notes[i]._time * TIME_NUMBER);
             Vector3 move = cube.transform.position;
-            move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time * 0.46153846f));
+            move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time * TIME_NUMBER));
             // if (move.z > 100.0f)
             // {
             //     move.y += 25.5f;
@@ -142,9 +144,9 @@ public class MappingCreator : MonoBehaviour
         else if (data._notes[i]._cutDirection == 1)
         {
             GameObject cube = LeanPool.Spawn(cubes[1], points[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
-            cube.GetComponent<Enemy>().Init(id: i, time: data._notes[i]._time * 0.46153846f);
+            cube.GetComponent<Enemy>().Init(id: i, time: data._notes[i]._time * TIME_NUMBER);
             Vector3 move = cube.transform.position;
-            move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time *  0.46153846f));
+            move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time *  TIME_NUMBER));
             // if (move.z > 100.0f)
             // {
             //     move.y += 25.5f;
@@ -155,9 +157,9 @@ public class MappingCreator : MonoBehaviour
         else if (data._notes[i]._cutDirection == 2)
         {
             GameObject cube = LeanPool.Spawn(cubes[2], points[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
-            cube.GetComponent<Enemy>().Init(id: i, time: data._notes[i]._time * 0.46153846f);
+            cube.GetComponent<Enemy>().Init(id: i, time: data._notes[i]._time * TIME_NUMBER);
             Vector3 move = cube.transform.position;
-            move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time * 0.46153846f));
+            move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time * TIME_NUMBER));
             // if (move.z > 100.0f)
             // {
             //     move.y += 25.5f;
@@ -169,9 +171,9 @@ public class MappingCreator : MonoBehaviour
         {
             //不要用數值，把他抽成變數，減少自己的工作量，子傑有講喔，不要再犯了
             GameObject cube = LeanPool.Spawn(cubes[3], points[data._notes[i]._lineIndex * 1 + data._notes[i]._lineLayer * 4]);
-            cube.GetComponent<Enemy>().Init(id: i, time: data._notes[i]._time * 0.46153846f);
+            cube.GetComponent<Enemy>().Init(id: i, time: data._notes[i]._time * TIME_NUMBER);
             Vector3 move = cube.transform.position;
-            move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time *  0.46153846f));
+            move = new Vector3(move.x, move.y, move.z + 10.0f * (data._notes[i]._time *  TIME_NUMBER));
             // if (move.z > 100.0f)
             // {
             //     move.y += 25.5f;
