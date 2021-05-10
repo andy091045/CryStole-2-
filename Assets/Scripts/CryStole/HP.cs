@@ -11,6 +11,7 @@ public class HP : MonoBehaviour
     public static HP Instance;
     public int hpCount = 50;
     public GameObject HP_UI;
+    public GameObject combo_UI;
     public Text PowerNumber;
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class HP : MonoBehaviour
     void Update()
     {
         HP_UI.GetComponent<TMP_Text>().text = hpCount + " ";
+        combo_UI.GetComponent<TMP_Text>().text = combo + " ";
         PowerNumber.text = hpCount + " ";
     }
     public void CountHP(int n)
